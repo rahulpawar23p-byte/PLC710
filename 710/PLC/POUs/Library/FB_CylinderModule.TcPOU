@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_CylinderModule" Id="{d649f128-d864-4cac-9d80-bdfe19c48edb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_CylinderModule
+VAR_INPUT
+	iResetModule:BOOL ;
+    iResetFaults:BOOL;//Reset Fault CMD
+    iEnergizeAtPwrOn:BOOL; // Energize Poweron Input
+    iWorkCmd:BOOL ;//Cyl Work Postion CMD
+    iHomeCmd:BOOL ;//Cyl Home Postion CMD
+    iWorkSen:BOOL ;// Cyl Work Postion Input
+    iHomeSen:BOOL ;// Cyl Home Postion Input
+    iWorkCleartoMove:BOOL ;// Condition Healthy then 1
+    iHomeCleartoMove:BOOL ;// Condition Healthy then 1
+    iTimeoutValue:TIME ;// Time Required E.gT#500MS,T#2S
+    iWorkSensDebounceVal:TIME ;//Time Required E.gT#500MS,T#2S
+    iHomeSensDebounceVal:TIME;
+END_VAR
+VAR_OUTPUT
+	qWorkSol: BOOL; // Cyl Work Position Sol Output
+    qHomeSol: BOOL; //Cyl Home Position Sol Output
+    qWorkOver: BOOL; // Cyl AT Work Position
+    qHomeOver: BOOL; //Cyl AT Home Position
+    qErrBothSensorOn: BOOL; //IF both WorkSen AND Homeen inputs are high AT the same TIME.
+    qErrHomeInterlock: BOOL; //homeCleartoMove is low AND home command is active.
+    qErrHomeSenNotLeft: BOOL; //home position sensor did NOT turn off within defined TIME
+    qErrHomeTout: BOOL; //cylinder did NOT reachhome position within definedTIME
+    qHomePosLost: BOOL; //home position achieved AND lost its position withoutwork
+    qErrWorkInterlock: BOOL; //WorkCleartoMove is low AND work command is active.
+    qErrWorkSenNotLeft: BOOL; //work position sensor didnot turn off within definedtime
+    qErrWorkTout: BOOL; //cylinder did NOT reachwork position within definedtime
+    qWorkPosLost: BOOL; //work position achievedand lost its position withouthome
+    qErrPipeSwaped: BOOL; //Pipe OR sensor swapped
+    qModError: BOOL; //Module error output
+END_VAR
+VAR
+	sFltRstPls: BOOL; //Stat BIT FOR positive edge OF reset fault input
+    sFltEdge: R_TRIG; //Positive edge OF fault reset input
+    sWorkPosMemBit: BOOL; //Stat BIT FOR work positionmemory BIT
+    sHomePosMemBit: BOOL; //Stat BIT FOR Home positionmemory BIT
+    sModError: BOOL; //Stat BIT FOR Module error
+    sRodLockTestNegBit: BOOL; //Stat BIT FOR Rod lock test negative pulse
+    sModuleResNegBit: BOOL; //Stat BIT FOR reset module negative pulse
+    sBrakeSolOffBit: BOOL; //Stat BIT FOR Brake solenoid offbit
+    sWorkSensDebTime: TIME; //Stat BIT work sensor debouncetime
+    sHomeSensDebTime: TIME; //Stat BIT work sensor debouncetime
+    sTimeoutValue: TIME; //Stat BIT FOR TIME out value
+    sPosEdge1: BOOL; //Positive Edge
+    sPosEdge4: BOOL; //Positive Edge
+    sPosEdge3: BOOL; //Positive Edge
+    sPosEdge2: BOOL; //Positive Edge
+    sPosEdge: BOOL; //Positive Edge
+    sRegainHomePos: BOOL; //Regain Home Position
+    sRegainWrkPos: BOOL; //Regain Work Position
+    sPipeSwapHomePulse: BOOL; //Pipe Swap pulse FOR Home solenoid
+	sWorkPosLost: BOOL; // 
+    sHomeSol: BOOL; //
+    sWorkSol: BOOL; //
+    sErrBothSensorOn: BOOL; 
+    sErrWorkInterlock: BOOL; 
+    sErrHomeInterlock: BOOL; 
+    sHomePosLost: BOOL; 
+    sErrWorkTout: BOOL; 
+    sErrWorkSenNotLeft: BOOL; 
+    sErrHomeTOut: BOOL; 
+    sErrHomeSenNotLeft: BOOL; 
+    sErrPipeSwaped: BOOL; 
+    sWorkOver: BOOL; 
+    sHomeOver: BOOL; 
+    sErrWorkCommon: BOOL; 
+    sErrHomeCommon: BOOL; 
+	tAlwaysOn: BOOL; //Temporary BIT FOR Always On
+    tAlwaysOff: BOOL; //Temporary BIT FOR Always Off
+
+	sDlyWorkSens: TON;
+	TON_0: TON;
+	sDlyHomeSens: TON;
+	sDlyTimeOutt: TON;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Always ON Logic
+tAlwaysOn := TRUE;
+ // Rising Edge Detection for Fault Reset
+
+sFltEdge(CLK := iResetFaults);
+sFltRstPls := sFltEdge.Q;
+ 
+ 
+// Work Sensor Debounce Timer
+sDlyWorkSens(
+
+    IN := iWorkSen,
+    PT := iWorkSensDebounceVal
+);
+ 
+// Output after debounce (optional if needed)
+//sDlyWorkSens.Q := sDlyWorkSens.Q;
+ 
+ // Home Sensor Debounce Timer
+sDlyHomeSens(
+    IN := iHomeSen,
+    PT := iHomeSensDebounceVal
+);
+ 
+// Output after debounce (optional if needed)
+//sDlyHomeSens.Q:= sDlyHomeSens.Q;
+ // Work Command Logic
+IF (
+    (iWorkCmd AND iWorkCleartomove) OR 
+    (sWorkSol AND sDlyWorkSens.Q AND NOT sDlyHomeSens.Q)
+   )
+   AND NOT iHomeCmd
+   AND NOT sHomeSol
+   AND NOT iResetModule
+   AND NOT sModError
+THEN
+    sWorkSol := TRUE;
+ELSE
+    sWorkSol := FALSE;
+END_IF;
+// Home Command Logic
+IF (
+    (iHomeCmd AND iHomeCleartomove) OR 
+    (sHomeSol AND sDlyHomeSens.Q AND NOT sDlyWorkSens.Q)
+   )
+   AND NOT iWorkCmd
+   AND NOT sWorkSol
+   AND NOT iResetModule
+   AND NOT sModError
+THEN
+    sHomeSol := TRUE;
+ELSE
+    sHomeSol := FALSE;
+END_IF;
+// Both Sensors ON Error
+IF (sDlyWorkSens.Q AND sDlyHomeSens.Q) THEN
+    sErrBothSensoron := TRUE;
+ELSIF (sFltRstPls) THEN
+    sErrBothSensoron := FALSE;
+END_IF;
+// Work Interlock Error
+IF (iWorkCmd AND NOT iWorkCleartomove) THEN
+    sErrWorkInterlock := TRUE;
+ELSIF (sFltRstPls) THEN
+    sErrWorkInterlock := FALSE;
+END_IF;
+// Home Interlock Error
+IF (iHomeCmd AND NOT iHomeCleartomove) THEN
+    sErrHomeInterlock := TRUE;
+ 
+ELSIF (sFltRstPls) THEN
+    sErrHomeInterlock := FALSE;
+END_IF;
+// Sensor Timeout Timer
+sDlyTimeOutt(
+    IN := (
+            (sWorkSol AND NOT sDlyWorkSens.Q AND NOT sErrWorkTout)
+         OR (sHomeSol AND NOT sDlyHomeSens.Q AND NOT sErrHomeTout)
+          ),
+    PT := iTimeoutValue
+);
+//sDlyTimeOutt.Q:= sDlyTimeOutt.Q;
+//Work Timeout Error
+IF (
+   (sWorkSol AND NOT sDlyWorkSens.Q AND sDlyTimeOutt.Q) OR
+   (sErrWorkTout AND NOT sFltRstPls)
+   )
+   THEN
+   sErrWorkTout := TRUE;
+   ELSE
+	   sErrWorkTout := FALSE;
+   END_IF;
+   
+   //Home Timeout Error
+IF (
+   (sHomeSol AND NOT sDlyHomeSens.Q AND sDlyTimeOutt.Q) OR
+   (sErrHomeTOut AND NOT sFltRstPls)
+   )
+   THEN
+   sErrHomeTOut := TRUE;
+   ELSE
+	   sErrHomeTOut := FALSE;
+   END_IF;
+//mode errors   
+   IF (
+   (sErrBothSensoron OR sErrWorkinterlock OR sErrHomeinterlock OR sErrWorkSenNotleft OR sErrWorkTout OR sErrHomeSennotleft OR sErrHomeTOut OR sErrPipeSwaped  OR sHomePosLost OR sWorkPosLost)
+   )
+   THEN
+   sModError := TRUE;
+   ELSE
+	   sModError := FALSE;
+   END_IF;
+	
+//Workover
+IF (
+   (sDlyWorkSens.Q AND NOT sDlyHomeSens.Q AND NOT sModError AND NOT iResetModule AND NOT sHomePosLost ) 
+   )
+   THEN
+   sWorkOver := TRUE;
+   ELSE
+	   sWorkOver := FALSE;
+   END_IF; 
+//Homeover
+IF (
+   (sDlyHomeSens.Q AND NOT sDlyWorkSens.Q AND NOT sModError AND NOT iResetModule AND NOT sWorkPosLost ) 
+   )
+   THEN
+   sHomeOver := TRUE;
+   ELSE
+	   sHomeOver := FALSE;
+   END_IF;   
+   
+   qHomeSol := sHomeSol;
+   qWorkSol := sWorkSol;
+   qErrBothSensoron := sErrBothSensoron;
+   qErrWorkinterlock := sErrWorkinterlock;
+   qErrHomeinterlock := sErrHomeinterlock;
+   qErrWorkSenNotleft := sErrWorkSenNotleft;
+   qErrHomeSennotleft := sErrHomeSennotleft;
+   qErrWorkTout := sErrWorkTout;
+   qErrHomeTout := sErrHomeTOut;
+   qErrPipeSwaped := sErrPipeSwaped;
+   qWorkPosLost := sWorkPosLost;
+   qHomePosLost := sHomePosLost;
+   qModError := sModError;
+   qWorkOver := sWorkOver;
+   qHomeOver := sHomeOver;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ]]></ST>
+    </Implementation>
+    <LineIds Name="FB_CylinderModule">
+      <LineId Id="162" Count="0" />
+      <LineId Id="164" Count="1" />
+      <LineId Id="168" Count="1" />
+      <LineId Id="171" Count="3" />
+      <LineId Id="176" Count="2" />
+      <LineId Id="180" Count="0" />
+      <LineId Id="182" Count="2" />
+      <LineId Id="186" Count="2" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="195" Count="0" />
+      <LineId Id="197" Count="2" />
+      <LineId Id="201" Count="0" />
+      <LineId Id="203" Count="12" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="217" Count="13" />
+      <LineId Id="245" Count="4" />
+      <LineId Id="244" Count="0" />
+      <LineId Id="251" Count="4" />
+      <LineId Id="250" Count="0" />
+      <LineId Id="257" Count="5" />
+      <LineId Id="256" Count="0" />
+      <LineId Id="264" Count="6" />
+      <LineId Id="263" Count="0" />
+      <LineId Id="273" Count="0" />
+      <LineId Id="296" Count="0" />
+      <LineId Id="272" Count="0" />
+      <LineId Id="274" Count="0" />
+      <LineId Id="289" Count="6" />
+      <LineId Id="297" Count="0" />
+      <LineId Id="299" Count="8" />
+      <LineId Id="298" Count="0" />
+      <LineId Id="308" Count="0" />
+      <LineId Id="310" Count="1" />
+      <LineId Id="313" Count="4" />
+      <LineId Id="309" Count="0" />
+      <LineId Id="275" Count="0" />
+      <LineId Id="319" Count="2" />
+      <LineId Id="323" Count="4" />
+      <LineId Id="318" Count="0" />
+      <LineId Id="329" Count="7" />
+      <LineId Id="328" Count="0" />
+      <LineId Id="276" Count="1" />
+      <LineId Id="337" Count="13" />
+      <LineId Id="278" Count="10" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

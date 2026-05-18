@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <GVL Name="MH" Id="{f4d22f5c-37ec-4530-a7fb-ec0ffeca26f2}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+//qx_7102R1_CellToHandling	AT	%Q*	:	//udt_HDL_CellToHandling	;	//	
+qStatus	AT	%Q*	:	WORD	;	//	0 Auto -- 1 Auto Startup -- 2 Manual -- 3 Error -- 4 LineMode -- 5 PowerOn -- 6 EnergySave -- 7 SafeOk
+qTime_Stamp	AT	%Q*	:	DATE_AND_TIME	;	//	
+qPartId	AT	%Q*	:	DINT	;	//	Unique Part Id (DMC Serial Number)
+qState	AT	%Q*	:	BOOL	;	//	Part state 0=OK, 1=NOK
+qPartType	AT	%Q*	:	BOOL	;	//	Part type 1=Long, 0=Short
+qExists	AT	%Q*	:	BOOL	;	//	Part exist
+qRequest	AT	%Q*	:	USINT	;	//	20 - Pick, 10 - Drop
+qRequestPartType	AT	%Q*	:	BOOL	;	//	Part types
+qGateOpened	AT	%Q*	:	BOOL	;	//	Handling gate opened
+qGateClosed	AT	%Q*	:	BOOL	;	//	Handling gate closed
+qFixtureReady	AT	%Q*	:	BOOL	;	//	Postioner in Cube
+qRaiseEnable1	AT	%Q*	:	BOOL	;	//	Handshake for raise to go all the way OUT
+qRaiseEnable2	AT	%Q*	:	BOOL	;	//	Handshake for raise to go all the way OUT
+qReduceEnable1	AT	%Q*	:	BOOL	;	//	Handshake for reduce to go all the way IN
+qReduceEnable2	AT	%Q*	:	BOOL	;	//	Handshake for reduce to go all the way IN
+qPickJobAck	AT	%Q*	:	BOOL	;	//	Handshake for pick job end
+qDropJobAck	AT	%Q*	:	BOOL	;	//	Handshake for drop job end
+qHold	AT	%Q*	:	BOOL	;	//	Robot hold
+qGripper1ReadyToClose	AT	%Q*	:	BOOL	;	//	Gripper1ReadyToClose
+qGripper1ReadyToOpen	AT	%Q*	:	BOOL	;	//	Gripper1ReadyToOpen
+qGripper2ReadyToClose	AT	%Q*	:	BOOL	;	//	Gripper2ReadyToClose
+qGripper2ReadyToOpen	AT	%Q*	:	BOOL	;	//	Gripper2ReadyToOpen
+qFeatureBit6	AT	%Q*	:	BOOL	;	//	Free use
+qFeatureBit7	AT	%Q*	:	BOOL	;	//	Free use
+//	AT	%Q*	:		;	//	
+//ix_7102R1_HandlingToCell	AT	%I*	:	//udt_HDL_HandlingToCell	;	//	
+iStatus	AT	%I*	:	WORD	;	//	0 Auto -- 1 Auto Startup -- 2 Manual -- 3 Error -- 4 LineMode -- 5 PowerOn -- 6 EnergySave -- 7 SafeOk
+iPartId	AT	%I*	:	DINT	;	//	Unique Part Id (DMC Serial Number)
+iState	AT	%I*	:	BOOL	;	//	Part state 0=OK, 1=NOK
+iPartType	AT	%I*	:	BOOL	;	//	Part type 1=Long, 0=Short
+iExists	AT	%I*	:	BOOL	;	//	Part exist
+iGateOpenRequest	AT	%I*	:	BOOL	;	//	Open handling gate
+iGateCloseRequest	AT	%I*	:	BOOL	;	//	Close handling gate
+iPickJobProceed	AT	%I*	:	BOOL	;	//	Pick job active
+iDropJobProceed	AT	%I*	:	BOOL	;	//	Drop job active
+iRaiseFinished1	AT	%I*	:	BOOL	;	//	Handshake for raise/ Robot reach at out off fixture pos
+iRaiseFinished2	AT	%I*	:	BOOL	;	//	Handshake for reduce/Robot reach at into fixture pos
+iReduceFinished1	AT	%I*	:	BOOL	;	//	Handshake for pick job end
+iReduceFinished2	AT	%I*	:	BOOL	;	//	Handshake for drop job end
+iPickJobOK	AT	%I*	:	BOOL	;	//	Robot in station area/robot infront of cell area
+iDropJobOK	AT	%I*	:	BOOL	;	//	PickJobOK
+iInArea	AT	%I*	:	BOOL	;	//	DropJobOK
+iPickDropProceed	AT	%I*	:	BOOL	;	//	InArea
+iGripper1ClosedAck	AT	%I*	:	BOOL	;	//	PickDropProceed
+iGripper1OpenedAck	AT	%I*	:	BOOL	;	//	Gripper1OpenedAck
+iGripper2ClosedAck	AT	%I*	:	BOOL	;	//	Gripper2ClosedAck
+iGripper2OpenedAck	AT	%I*	:	BOOL	;	//	Gripper2OpenedAck
+iFeatureBit6	AT	%I*	:	BOOL	;	//	Free use
+iFeatureBit7	AT	%I*	:	BOOL	;	//	Free use
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

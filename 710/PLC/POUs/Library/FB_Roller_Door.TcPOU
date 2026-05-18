@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_Roller_Door" Id="{0eef03d8-0a87-4bfe-9819-8fb6545b98c6}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Roller_Door
+VAR_INPUT
+	// Inputs
+    OpenBtn   : BOOL;
+    CloseBtn  : BOOL;
+    StopBtn   : BOOL;
+    LS_Open   : BOOL;
+    LS_Close  : BOOL;
+END_VAR
+VAR_OUTPUT
+	// Outputs
+    Motor_Up   : BOOL;
+    Motor_Down : BOOL;
+	Motor_Up_Reached:BOOL;
+	Motor_Down_Reached:BOOL;
+END_VAR
+VAR
+	// Internal states (latch)
+    Opening : BOOL := FALSE;
+    Closing : BOOL := FALSE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// OPEN command
+IF OpenBtn AND NOT LS_Open THEN
+    Opening := TRUE;
+    Closing := FALSE;
+END_IF;
+  
+// CLOSE command
+IF CloseBtn AND NOT LS_Close THEN
+    Closing := TRUE;
+    Opening := FALSE;
+END_IF;
+  
+// STOP command
+IF StopBtn THEN
+    Opening := FALSE;
+    Closing := FALSE;
+END_IF;
+  
+// Limit conditions (auto stop)
+IF LS_Open THEN
+    Opening := FALSE;
+END_IF;
+ 
+IF LS_Close THEN
+    Closing := FALSE;
+END_IF;
+
+// --- Outputs ---
+Motor_Up := Opening AND NOT LS_Open;
+Motor_Down := Closing AND NOT LS_Close;
+
+
+Motor_Up_Reached := LS_Open;
+Motor_Down_Reached := LS_Close;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Roller_Door">
+      <LineId Id="456" Count="5" />
+      <LineId Id="463" Count="5" />
+      <LineId Id="470" Count="5" />
+      <LineId Id="477" Count="6" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="509" Count="3" />
+      <LineId Id="508" Count="0" />
+      <LineId Id="507" Count="0" />
+      <LineId Id="506" Count="0" />
+      <LineId Id="505" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

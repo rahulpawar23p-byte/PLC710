@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_AutoSeq" Id="{8c569b68-7ea6-4805-8a02-25e5e0030992}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AutoSeq
+VAR
+	
+	sRegularCycle: BOOL;
+	sJumpWeldSideCycle: BOOL;
+	MainJobActive: BOOL;
+	temp: BOOL;
+END_VAR
+
+VAR_INPUT
+	iAutorunning: BOOL;
+	iInputAreaActive: BOOL;
+	iHTableAt_0_DegreeFB: BOOL;
+	iPartPresent: BOOL;
+	iWeldRobotAtSafeArea: BOOL;
+	iStationDeactivate: BOOL;
+	iWorkAreaActive: BOOL;
+	iTrunionAt_0_DegreeFB: BOOL;
+	iHDLRbtAtSafeArea: BOOL;
+	iRollerDoor1CLosed: BOOL;
+	iHTableAt_180_DegreeFB: BOOL;
+	iRollerDoor2CLosed: BOOL;
+	iRawPartPresent1: BOOL;
+	iRawPartPresent2: BOOL;
+	iRawPartPresent3: bool;
+	iRawPartPresent4: BOOL;
+	iValve1Home: BOOL;
+	iValve2Home: BOOL;
+	iValve3Home: BOOL;
+	iValve4Home: BOOL;
+	iValve5Home: BOOL;
+	iValve6Home: BOOL;
+	iValve1Work: BOOL;
+	iValve2Work: BOOL;
+	iValve3Work: BOOL;
+	iValve4Work: BOOL;
+	iValve5Work: BOOL;
+	iValve6Work: BOOL;
+	iTrunionAt_20_DegreeFB: BOOL;
+	iTrunionAt_minus80_DegreeFB: BOOL;
+	iTrunionAt_minus45_DegreeFB: BOOL;
+	iRollerDoor1Opened: BOOL;
+	iRollerDoor2Opened: BOOL;
+	iAuthorization: BOOL;
+	iMainJobActive: BOOL;
+	iWeldOn:BOOL;
+	iHDLGateopenRequest: BOOL;
+	iReducedEnable1Finished: BOOL;
+	iReducedEnable2Finished: BOOL;
+	iHDLGripperClosedFB1: BOOL;
+	iHDLGripperClosedFB2: BOOL;
+	iHDLRaisedEnable1Finished: BOOL;
+	iHDLRaisedEnable2Finished: BOOL;
+	iHDLRobotInArea: BOOL;
+	iHDLPickJobACK: BOOL;
+	iProgramNumber: INT;
+END_VAR
+VAR RETAIN
+	Step: INT;
+END_VAR
+VAR PERSISTENT
+	Steps: INT;
+END_VAR
+VAR_OUTPUT
+	oResetAutoCHain: BOOL;
+	
+	oHTableStart_0_Degree_OP: BOOL;
+	oRollerDoor1Close_OP: BOOL;
+	oRollerDoor2Close_OP: BOOL;
+	oHTableStart_180_Degree_OP: BOOL;
+	oValve1Home: BOOL;
+	oValve1Home1: BOOL;
+	oValve1Home2: BOOL;
+	oValve1Home3: BOOL;
+	oValve1Home4: BOOL;
+	oValve1Home5: BOOL;
+	oValve1Home6: BOOL;
+	oTrunionRotate_20_Degree_OP: BOOL;
+	oTrunionRotate_0_Degree_OP: BOOL;
+	oRollerDoor1Opens_OP: BOOL;
+	oRollerDoor2Opens_OP: BOOL;
+	oLightcurtainMute: BOOL;
+	oValve1Work1: BOOL;
+	oValve1Work3: BOOL;
+	oValve1Work5: BOOL;
+	oAuthorization: BOOL;
+	oTrunionRotate_minus80_Degree_OP: BOOL;
+	oTrunionRotate_minus45_Degree_OP: BOOL;
+	oValve1Work2: BOOL;
+	oValve1Work4: BOOL;
+	oValve1Work6: BOOL;
+	oProgramNumber: INT;
+	oWeldStart: BOOL;
+	oFixtureReady: BOOL;
+	oPickJobReady: BOOL;
+	oReducedEnable1: BOOL;
+	oReducedEnable2: BOOL;
+	oGripperCloseRequest1: BOOL;
+	oGripperCloseRequest2: BOOL;
+	oHDLRaisedEnable1: BOOL;
+	oHDLRaisedEnable2: BOOL;
+	oHDLPickJobACK: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE step OF
+	0:// Step0- Idle
+	IF iAutorunning THEN
+		oResetAutoCHain:= TRUE;
+		
+		Step:=10;
+	END_IF;
+	10:// Step10- Init
+	IF iAutorunning AND iInputAreaActive 
+           AND iTrunionAt_0_DegreeFB AND NOT iPartPresent 
+           AND iWeldRobotAtSafeArea AND NOT iStationDeactivate 
+           THEN
+		   sRegularCycle:= TRUE;
+		   oHTableStart_0_Degree_OP:= TRUE;
+		   Step:=20;
+	ELSIF iAutorunning AND iWorkAreaActive 
+           AND iTrunionAt_0_DegreeFB AND NOT iPartPresent 
+           AND iWeldRobotAtSafeArea AND NOT iStationDeactivate 
+           THEN
+		   sJumpWeldSideCycle:= TRUE;
+		   Step:=280;
+	ELSIF iAutorunning AND iInputAreaActive 
+           AND iTrunionAt_0_DegreeFB AND NOT iPartPresent 
+           AND iWeldRobotAtSafeArea AND iStationDeactivate
+		   THEN
+		   IF iStationDeactivate AND iWeldRobotAtSafeArea
+			   AND iInputAreaActive
+			   THEN
+			   oRollerDoor1Close_OP:= TRUE;    
+		   END_IF;
+		   IF iStationDeactivate AND iWeldRobotAtSafeArea
+			   AND iInputAreaActive
+			   AND iTrunionAt_0_DegreeFB AND NOT MainJobActive AND iRollerDoor1CLosed
+			   THEN 
+			   oHTableStart_180_Degree_OP:= TRUE;
+		   END_IF;
+		   IF iStationDeactivate AND iWeldRobotAtSafeArea AND iRollerDoor2CLosed
+			   AND iHDLRbtAtSafeArea AND iWorkAreaActive
+			   AND iTrunionAt_0_DegreeFB AND NOT MainJobActive AND iHTableAt_180_DegreeFB
+			   THEN
+			   temp:=TRUE;
+		   END_IF
+		   IF iStationDeactivate AND iWeldRobotAtSafeArea
+			   AND iHDLRbtAtSafeArea AND iWorkAreaActive AND iRollerDoor2CLosed
+			   AND iTrunionAt_0_DegreeFB AND NOT MainJobActive AND iHTableAt_180_DegreeFB
+			   THEN
+			   oHTableStart_0_Degree_OP:= TRUE;
+		   END_IF;
+		   IF iHTableAt_0_DegreeFB AND iWeldRobotAtSafeArea
+			   AND iInputAreaActive
+			   AND iTrunionAt_0_DegreeFB AND NOT MainJobActive AND iRollerDoor1CLosed
+			   THEN
+			   Step:=0;
+			END_IF;     
+	END_IF;
+	20:// Step20- all Valve Home Commd
+	IF iAutorunning AND iInputAreaActive AND sRegularCycle
+        AND iHTableAt_0_DegreeFB AND NOT iPartPresent 
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate 
+        THEN
+		oValve1Home1:= TRUE;
+		oValve1Home2:= TRUE;
+		oValve1Home3:= TRUE;
+		oValve1Home4:= TRUE;
+		oValve1Home5:= TRUE;
+		oValve1Home6:= TRUE;
+		Step:=30;
+	ELSIF iAutorunning AND iInputAreaActive AND sRegularCycle
+        AND iHTableAt_0_DegreeFB AND NOT iPartPresent 
+        AND  iRawPartPresent1 AND iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate
+		THEN 
+		Step:=777;
+	ELSIF iAutorunning AND iInputAreaActive AND sRegularCycle
+        AND iHTableAt_0_DegreeFB AND NOT iPartPresent 
+        AND  iRawPartPresent1 AND iRawPartPresent2
+		AND  iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate
+		THEN 
+		Step:=777;
+	END_IF;
+				
+    30:// Step30- Trunion 20 degree
+	IF iAutorunning AND iInputAreaActive AND sRegularCycle
+        AND iHTableAt_0_DegreeFB  
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate AND iValve1Home AND iValve2Home
+		AND iValve3Home AND iValve4Home AND iValve5Home
+		AND iValve6Home
+        THEN
+		oTrunionRotate_20_Degree_OP:= TRUE;
+		Step:=40;
+	END_IF;
+	40:// Step40- Roller Door 1 open CMD
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_20_DegreeFB
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate 
+        THEN
+		oRollerDoor1Opens_OP:= TRUE;
+		Step:=50;
+	END_IF;
+	50:// Step50- Door Open Check
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_20_DegreeFB
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1Opened
+        THEN
+		temp:= TRUE;
+		oLightcurtainMute:=TRUE;
+		
+		Step:=60;
+	END_IF;
+	60:// Step60- Load part check 
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_20_DegreeFB
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1Opened
+        THEN
+		temp:= TRUE;
+		oAuthorization:=TRUE;
+		Step:=70;
+	END_IF;
+	70:// Step70- Clamp Close 1-3-5 and RD close
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_20_DegreeFB
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1Opened AND iAuthorization
+        THEN
+		oValve1Work1:= TRUE;
+		oValve1Work3:= TRUE;
+		oValve1Work5:= TRUE;
+		oRollerDoor1Close_OP:=TRUE;
+		Step:=80;
+	END_IF;
+	80:// Step80- Trunion rotates -80 
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_20_DegreeFB
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1closed 
+        THEN
+		oTrunionRotate_minus80_Degree_OP:= TRUE;
+		Step:=90;
+	END_IF;
+	90:// Step90- RD1 Open
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_minus80_DegreeFB
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1closed 
+        THEN
+		oRollerDoor1Opens_OP:= TRUE;
+		oLightcurtainMute:=TRUE;
+		Step:=100;
+	END_IF;
+	100:// Step100- Load part check 3-4
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_minus80_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1Opened
+        THEN
+		temp:= TRUE;
+		oAuthorization:=TRUE;
+		Step:=110;
+	END_IF;
+	110:// Step110- Clamp Close 2-4-6 and RD close
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_minus80_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1Opened
+        THEN
+		oValve1Work2:= TRUE;
+		oValve1Work4:= TRUE;
+		oValve1Work6:= TRUE;
+		oRollerDoor1Close_OP:=TRUE;
+		Step:=120;
+	END_IF;
+	120:// Step120- trunion rotates 0 degree
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_minus80_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1closed
+        THEN
+		oTrunionRotate_0_Degree_OP:=TRUE;
+		Step:=130;
+	END_IF;
+	130:// Step130- H-Table Rotates 180 Degree
+	IF iAutorunning AND iInputAreaActive
+        AND iHTableAt_0_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor1closed
+		AND iWeldRobotAtSafeArea AND iRollerDoor2closed 
+		AND NOT iMainJobActive
+        THEN
+		oHTableStart_180_Degree_OP:=TRUE;
+		Step:=140;
+	END_IF;
+	140:// Step140- Weld Program Move in Robot
+	IF iAutorunning AND iworkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate 
+		AND iWeldRobotAtSafeArea AND iRollerDoor2closed 
+        THEN
+		oProgramNumber:=1;
+		Step:=150;
+	END_IF;
+	150:// Step150- Robots Welding Start
+	IF iAutorunning AND iworkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2closed 
+		AND iProgramNumber =1
+        THEN
+		oWeldStart:=TRUE;
+		Step:=160;
+	END_IF;
+	160:// Step160- Weld Finish and Unclamp part and RD2 open
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1Work AND iValve3Work AND iValve5Work
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2closed 
+		AND NOT iMainJobActive AND NOT iWeldon
+        THEN
+		iValve1Home:=TRUE;
+		iValve3Home:=TRUE;
+		iValve5Home:=TRUE;
+		oRollerDoor2Opens_OP:=TRUE;
+		Step:=170;
+	END_IF;
+	170:// Step170- Fixtre ready and Pick Job request
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1home AND iValve3home AND iValve5home
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon
+        THEN
+		oFixtureReady:=TRUE;
+		oPickJobReady:=TRUE;
+		Step:=175;
+	END_IF;
+	175:// Step175- Gate Open Request request
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1home AND iValve3home AND iValve5home
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLGateopenRequest
+        THEN
+		oRollerDoor2Opens_OP:=TRUE;
+		oPickJobReady:=TRUE;
+		Step:=180;
+	END_IF;
+	180:// Step180- Reduce enble1 request
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1home AND iValve3home AND iValve5home
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon
+        THEN
+		oReducedEnable1:=TRUE;
+		oPickJobReady:=TRUE;
+		Step:=190;
+	END_IF;
+	190:// Step190- Gripper Close request
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1home AND iValve3home AND iValve5home
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent1 AND iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iReducedEnable1Finished
+        THEN
+		oGripperCloseRequest1:=TRUE;
+		oPickJobReady:=TRUE;
+		Step:=200;
+	END_IF;
+	200:// Step200- Raise Enable Request
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1home AND iValve3home AND iValve5home
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLGripperClosedFB1
+        THEN
+		oHDLRaisedEnable1:=TRUE;
+		Step:=210;
+	END_IF;
+	210:// Step210- Trunion -45 degree
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve1home AND iValve3home AND iValve5home
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLRaisedEnable1Finished
+        THEN
+		oTrunionRotate_minus45_Degree_OP:=TRUE;
+		Step:=220;
+	END_IF;
+	220:// Step220- Unclamp 2-4-6
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+		AND iValve2Work AND iValve4Work AND iValve6Work
+        AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLRaisedEnable1Finished
+        THEN
+		oValve1Home2:=TRUE;
+		oValve1Home4:=TRUE;
+		oValve1Home6:=TRUE;
+		oPickJobReady:=TRUE;
+		Step:=230;
+	END_IF;
+	230:// Step230-Reduced enable 2
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_minus45_DegreeFB
+		AND iValve2Home AND iValve4Home AND iValve6Home
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon 
+        THEN
+		oReducedEnable2:=TRUE;
+		Step:=240;
+	END_IF;
+	240:// Step240-Gripper 2 Request
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_minus45_DegreeFB
+		AND iValve2Home AND iValve4Home AND iValve6Home
+		AND iRawPartPresent3 AND iRawPartPresent4
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iReducedEnable2Finished
+        THEN
+		oGripperCloseRequest2:=TRUE;
+		Step:=250;
+	END_IF;
+	250:// Step250-Raised enable 2
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_minus45_DegreeFB
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLGripperClosedFB2
+        THEN
+		oHDLRaisedEnable2:=TRUE;
+		Step:=260;
+	END_IF;
+	260:// Step260-HDL Robot Outof work Area
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_minus45_DegreeFB
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLRaisedEnable2Finished
+		AND NOT iHDLRobotInArea 
+        THEN
+		oHDLPickJobACK:=TRUE;
+		Step:=270;
+	END_IF;
+	270:// Step270-RD2 Close and Trunion 0
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_minus45_DegreeFB
+        AND NOT iStationDeactivate AND iRollerDoor2Opened
+		AND NOT iMainJobActive AND NOT iWeldon AND iHDLRaisedEnable2Finished
+		AND NOT iHDLRobotInArea AND iHDLPickJobACK
+        THEN
+		oHDLPickJobACK:=FALSE;
+		oRollerDoor2Close_OP:=TRUE;
+		oTrunionRotate_0_Degree_OP:=TRUE;
+		Step:=280;
+	END_IF;
+	280:// Step280-H Table rotates 0 degree
+	IF iAutorunning AND iWorkAreaActive
+        AND iHTableAt_180_DegreeFB  AND iTrunionAt_0_DegreeFB
+        AND NOT iStationDeactivate AND iRollerDoor2closed
+		AND NOT iMainJobActive AND NOT iWeldon AND ((iHDLRaisedEnable2Finished
+		AND NOT iHDLRobotInArea AND iHDLPickJobACK) OR sJumpWeldSideCycle) 
+        THEN
+		oHTableStart_0_Degree_OP:=TRUE;
+		Step:=290;
+	END_IF;
+	300:// Step300- all Valve Home Commd
+	IF iAutorunning AND iInputAreaActive 
+        AND iHTableAt_0_DegreeFB  
+        AND NOT iRawPartPresent1 AND NOT iRawPartPresent2
+		AND NOT iRawPartPresent3 AND NOT iRawPartPresent4
+        AND NOT iStationDeactivate 
+        THEN
+		oValve1Home1:= TRUE;
+		oValve1Home2:= TRUE;
+		oValve1Home3:= TRUE;
+		oValve1Home4:= TRUE;
+		oValve1Home5:= TRUE;
+		oValve1Home6:= TRUE;
+		Step:=0;
+	END_IF;	
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="FB_AutoSeq">
+      <LineId Id="117" Count="238" />
+      <LineId Id="756" Count="0" />
+      <LineId Id="356" Count="180" />
+      <LineId Id="652" Count="0" />
+      <LineId Id="538" Count="11" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

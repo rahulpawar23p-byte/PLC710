@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_ModeCall" Id="{88c66b4a-53f3-4379-8b3b-d7cdd103aff7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ModeCall
+VAR_INPUT
+	iControlOn: BOOL;
+	iAutoMode: BOOL;
+	iManMode : BOOL;
+	iCycleStart: BOOL;
+	iCycleStop:BOOL;
+	iHome:BOOL;
+	iEndOfCycle:BOOL;
+	iDryCycle:BOOL;
+	iHomeComplete:BOOL;
+	iImmediateStop:BOOL;
+	iCycleStartDelay:TIME;
+	iFaultReset:BOOL;
+	
+END_VAR
+VAR_OUTPUT
+	qAutoModeActive:BOOL;
+	qManModeActive:BOOL;
+	qWaitForStart:BOOL;
+	qAutoRunningActive:BOOL;
+	qHomeRunningActive:BOOL;
+	qCycleStopActive:BOOL;
+	qDryCycleActive:BOOL;
+	qMsgCSnotStartNoHome:BOOL;
+	qManModeAutoRunning:BOOL;
+	
+	
+END_VAR
+VAR
+	sAlwaysOn:BOOL;
+	sAlwaysOff:BOOL;
+	sPowerOnReset: BOOL;
+	sManModeActive: BOOL;
+	sAutoRunningActive: BOOL;
+	sAutoModeActive: BOOL;
+	sHomeRunningActive: BOOL;
+	sWaitForCycleStart: BOOL;
+	CycleStartOn: TON;
+	sDryCycleActive: BOOL;
+	sCycleStopActive: BOOL;
+	sMsgCStartandNoHome: BOOL;
+	sMsgManModeInAutoRunning: BOOL;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Always ON Logic
+sAlwaysOn := TRUE;
+sPowerOnReset := NOT iControlOn;
+//Manual_Mode_active:
+IF (
+    (iManMode ) OR 
+    (sManModeActive)
+   )
+   AND NOT iAutoMode
+   AND NOT sAutoRunningActive
+   AND NOT sPowerOnReset
+THEN
+    sManModeActive := TRUE;
+ELSE
+    sManModeActive := FALSE;
+END_IF;
+//Auto_Mode_active:
+IF (
+    (iAutoMode ) OR 
+    (sAutoModeActive)
+   )
+   AND NOT iManMode
+   AND NOT sPowerOnReset
+   AND NOT sHomeRunningActive
+   AND NOT iImmediateStop
+THEN
+    sAutoModeActive := TRUE;
+ELSE
+    sAutoModeActive := FALSE;
+END_IF;
+//Wait_For_Cycle_Start:
+IF (
+    (sAutoModeActive AND NOT iManMode ) OR 
+    (sWaitForCycleStart)
+   )
+   AND NOT sManModeActive
+   AND NOT sPowerOnReset
+   AND NOT sAutoRunningActive
+   AND NOT iImmediateStop
+THEN
+    sWaitForCycleStart := TRUE;
+ELSE
+    sWaitForCycleStart := FALSE;
+END_IF;
+// Sensor Timeout Timer
+CycleStartOn(
+    IN := (
+            (iCycleStart AND sWaitForCycleStart AND iHomeComplete AND NOT iCycleStop)
+                   ),
+    PT := iCycleStartDelay
+);
+//CycleStartOn.Q:= CycleStartOn.Q;
+//Dry Cycle Active:
+IF (
+    (iDryCycle AND NOT sWaitForCycleStart ) OR
+    sWaitForCycleStart
+   )
+   AND  sAutoModeActive
+   AND NOT sManModeActive
+   AND NOT sPowerOnReset
+   AND NOT iImmediateStop
+THEN
+    sDryCycleActive := TRUE;
+ELSE
+    sDryCycleActive := FALSE;
+END_IF;
+//Cycle stop Active:
+IF (
+    (iCycleStop ) OR
+    sCycleStopActive
+   )
+   AND  sAutoModeActive
+   AND NOT sManModeActive
+   AND NOT sPowerOnReset
+   AND NOT iHomeComplete
+THEN
+    sCycleStopActive := TRUE;
+ELSE
+    sCycleStopActive := FALSE;
+END_IF;
+//AutoCycleStart:
+IF (
+    (sWaitForCycleStart AND CycleStartOn.Q ) OR
+    (sAutoRunningActive AND NOT iImmediateStop)
+   )
+   AND  sAutoModeActive
+   AND NOT sManModeActive
+   AND NOT sPowerOnReset
+   AND NOT sCycleStopActive
+THEN
+    sAutoRunningActive := TRUE;
+ELSE
+    sAutoRunningActive := FALSE;
+END_IF;
+//HomeCycleStart:
+IF (
+    (iHome ) OR
+    (sHomeRunningActive)
+   )
+   AND  sManModeActive
+   AND NOT sAutoModeActive
+   AND NOT sPowerOnReset
+   AND NOT iImmediateStop
+   AND NOT iHomeComplete
+THEN
+    sHomeRunningActive := TRUE;
+ELSE
+    sHomeRunningActive := FALSE;
+END_IF;
+//AutoCycleNotStart:
+IF    iCycleStart
+   AND sWaitForCycleStart
+   AND NOT sPowerOnReset
+   AND NOT iHomeComplete
+THEN
+    sMsgCStartandNoHome := TRUE;
+ELSE
+    sMsgCStartandNoHome := FALSE;
+END_IF;
+//ManModeinAutoRunning:
+IF    sAutoRunningActive
+   AND sManModeActive
+  
+THEN
+    sMsgManModeInAutoRunning := TRUE;
+ELSE
+    sMsgManModeInAutoRunning := FALSE;
+END_IF;
+qManModeActive:=sManModeActive;
+qAutoModeActive:=sAutoModeActive;
+qWaitForStart:=sWaitForCycleStart;
+qDryCycleActive:=sDryCycleActive;
+qAutoRunningActive:=sAutoRunningActive;
+qHomeRunningActive:=sHomeRunningActive;
+qMsgCSnotStartNoHome:=sMsgCStartandNoHome;
+qManModeAutoRunning:=sMsgManModeInAutoRunning;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_ModeCall">
+      <LineId Id="54" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="55" Count="1" />
+      <LineId Id="58" Count="6" />
+      <LineId Id="66" Count="3" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="71" Count="5" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="83" Count="1" />
+      <LineId Id="79" Count="3" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="100" Count="12" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="113" Count="4" />
+      <LineId Id="119" Count="1" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="121" Count="12" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="134" Count="12" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="169" Count="12" />
+      <LineId Id="147" Count="0" />
+      <LineId Id="182" Count="8" />
+      <LineId Id="195" Count="0" />
+      <LineId Id="191" Count="3" />
+      <LineId Id="148" Count="0" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="200" Count="0" />
+      <LineId Id="202" Count="1" />
+      <LineId Id="205" Count="4" />
+      <LineId Id="149" Count="0" />
+      <LineId Id="210" Count="3" />
+      <LineId Id="215" Count="3" />
+      <LineId Id="150" Count="1" />
+      <LineId Id="219" Count="0" />
+      <LineId Id="152" Count="0" />
+      <LineId Id="220" Count="2" />
+      <LineId Id="153" Count="0" />
+      <LineId Id="224" Count="0" />
+      <LineId Id="223" Count="0" />
+      <LineId Id="154" Count="14" />
+      <LineId Id="90" Count="9" />
+      <LineId Id="85" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

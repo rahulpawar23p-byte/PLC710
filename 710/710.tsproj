@@ -1,0 +1,3534 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.74">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{ED9170A4-8881-107B-7EB7-B4C5DC187627}" AutoDeleteType="true">Input</Name>
+			<BitSize>2048</BitSize>
+			<SubItem>
+				<Name>i_Control_Pressure_Sw_In1_BPB1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Control Pressure Switch Input 1-BPB1  ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Control_Pressure_Sw_In2_BPB1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Control Pressure Switch Input 2-BPB1  ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Valve_Pos_BGB1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Valve Position-BGB1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_BPB1_0_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC6_Clamp_1_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 6 Clamping Unit 1 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC6_Clamp_1_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 6 Clamping Unit 1 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC4_Clamp_3_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 3 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC4_Clamp_3_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 3 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B13</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B13]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B27</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B27]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>72</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B14</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B14]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B28</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B28]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>88</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_BGB1_1_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_BGB1_1_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_KEC6Salvemodule12_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Connect to KEC6 Salve module 1.2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_KEC6Salvemodule12_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Connect to KEC6 Salve module 1.2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_2_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_2_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_3_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_3_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC4_Clamp_1_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 1 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC4_Clamp_1_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 1 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC4_Clamp_2_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 2 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC4_Clamp_2_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 2 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC2_Clamp_3_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 3 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC2_Clamp_3_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 3 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B12</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B12]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B26</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B26]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B11</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B11]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B25</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B25]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B10</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B10]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B24</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B24]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_5_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_5_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_5_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_5_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_6_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_6_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_7_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_7_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC3_Clamp_1_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 1 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC3_Clamp_1_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 1 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC3_Clamp_2_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 2 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC3_Clamp_2_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 2 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC3_Clamp_3_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 3 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC3_Clamp_3_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 3 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B21</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B21]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B20</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B20]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>584</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B19</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B19]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>600</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_9_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_9_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>616</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_KEC8Salvemodule22_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Connect to KEC8 Salve module 2.2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_KEC8Salvemodule22_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Connect to KEC8 Salve module 2.2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>648</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>680</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_10_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_10_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>696</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>712</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>728</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>744</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_11_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_11_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>760</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC1_Clamp_1_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 1 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC1_Clamp_1_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 1 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>776</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC1_Clamp_2_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 2 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC1_Clamp_2_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 2 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>792</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC1_Clamp_3_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 3 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC1_Clamp_3_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 3 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>808</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B18</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B18]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>824</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B17</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B17]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>840</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>848</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B16</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B16]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>856</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_13_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>864</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_13_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>872</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_13_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_13_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>888</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>904</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>912</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>920</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>936</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_14_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_14_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>952</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>968</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>976</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>984</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1000</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1008</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_15_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_15_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1016</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC2_Clamp_1_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 1 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1024</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC2_Clamp_1_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 1 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1032</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC2_Clamp_2_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 2 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1040</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC2_Clamp_2_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 2 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1048</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B9</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B9]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1056</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B23</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B23]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1064</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B8</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B8]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1072</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B22</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B22]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1080</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1088</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1096</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_17_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_18_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_18_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_19_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_19_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1296</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1304</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1328</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_20_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_20_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1336</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1344</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1376</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_21_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_21_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1424</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1432</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_22_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_22_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1504</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_23_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_23_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC5_Clamp_1_Sensor_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 5 Clamping Unit 1 sensor  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_CC5_Clamp_1_Sensor_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 5 Clamping Unit 1 sensor  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_PART_CONTROL_B15</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	PART CONTROL  B15]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_24_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_24_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_24_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1584</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_24_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1592</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1600</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1608</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1616</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1624</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1640</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1648</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_25_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1656</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1672</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1680</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1688</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1696</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1704</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1712</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_26_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_26_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1720</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1728</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1736</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1744</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1760</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1776</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_27_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_27_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1784</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1792</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1800</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1808</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1824</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1832</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1840</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_28_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_28_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1848</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1856</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1864</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1872</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1888</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1904</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_29_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_29_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1912</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1920</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1936</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1952</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1968</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_30_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_30_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1976</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_0]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1984</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_1]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_2]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2000</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_3]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2008</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_4]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2016</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_5]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2024</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_6]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2032</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>i_Reserve_31_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	i_Reserve_31_7]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2040</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{4BBCE1E1-9DC8-3536-C028-BA46CE441BE0}" AutoDeleteType="true">WeldRobotIn</Name>
+			<BitSize>96</BitSize>
+			<SubItem>
+				<Name>iMainJobActive</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>iAtParkPos</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>iWeldOn</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>iProgramNumber</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Pos_20</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Pos_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ 0 degree feedback]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Pos_M45</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Pos_M80</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>72</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>LS_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>LS_180</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>88</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{309E5387-2C65-08D2-3A3A-DD51F9D67497}" AutoDeleteType="true">Output</Name>
+			<BitSize>256</BitSize>
+			<SubItem>
+				<Name>o_CC1_CLAMPING_UNIT1_3_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 1-3  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC1_CLAMPING_UNIT1_3_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 1 Clamping Unit 1-3  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC2_CLAMPING_UNIT2_3_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 1-3  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC2_CLAMPING_UNIT2_3_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 2 Clamping Unit 1-3  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC3_CLAMPING_UNIT3_3_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 1-3  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC3_CLAMPING_UNIT3_3_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 3 Clamping Unit 1-3  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC4_CLAMPING_UNIT4_3_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 1-3  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC4_CLAMPING_UNIT4_3_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 4 Clamping Unit 1-3  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC5_CLAMPING_UNIT5_1_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 5 Clamping Unit 1  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC5_CLAMPING_UNIT5_1_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 5 Clamping Unit 1  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>72</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC6_CLAMPING_UNIT6_1_WP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 6 Clamping Unit 1  WP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_CC6_CLAMPING_UNIT6_1_HP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Clamping Circuit 6 Clamping Unit 1  HP]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>88</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_1_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_1_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_1_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_1_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>136</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>144</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>152</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_2_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>184</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>200</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>216</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>o_RESERVE_3_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[	Free]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>248</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{9B724B9C-5095-8350-5AB6-16107B1CE374}" AutoDeleteType="true">WeldRobotOut</Name>
+			<BitSize>80</BitSize>
+			<SubItem>
+				<Name>oProgramNumber</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>oWeldStart</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Move_20</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Move_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Move to 0 degree]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Move_M45</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Move_M80</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Motor_CW_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Motor_CCW_180</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000004}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..3] OF BIT</Name>
+			<BitSize>4</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000008}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BYTE</Name>
+			<BitSize>8</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000000C}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..11] OF BIT</Name>
+			<BitSize>12</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>12</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety" TcBaseType="true">FSOE_6</Name>
+			<BitSize>48</BitSize>
+			<SubItem>
+				<Name>FSoE CMD</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000002}">USINT</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>FSoE Data</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000032}">BITARR8</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>FSoE CRC_0</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>FSoE ConnID</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
+			<BitSize>6</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000010}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BYTE</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1001">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000120b0000120b00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1002">424dd6020000000000003600000028000000100000000e0000000100180000000000a002000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff008066008099008066008099008066ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00ffff00000000ffff000000008099ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00ffff00ffff00ffff00ffff008066ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00ffff00ffff00ffff00ffff008099ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00ffff00000000ffff000000008066ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00ffffff000000ffffff0000008099ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00ffff00ffff00ffff00ffff008066ff00ffff00ffff00ffff00ffff00ff66009999006666009999006666009999006600ffff00000000ffff000000008099ff00ffff00ffff00ffff00ffff00ff99006666009999006666009999006666009900ffff0000ff00ffff0000ff008066ff00ffff00ffff00ffff00ffff00ff66009999006666009999006666009999006600ffff00ffff00ffff00ffff008099ff00ffff00ffff00ffff00ffff00ff99006666009999006666009999006666009900ffff00000000ffff000000008066ff00ffff00ffff00ffff00ffff00ff66009999006666009999006666009999006600ffff00ffff00ffff00ffff008099ff00ffff00ffff00ffff00ffff00ff99006666009999006666009999006666009900ffff00800000ffff008000008066ff00ffff00ffff00ffff00ffff00ff66009999006666009999006666009999006600ffff00ffff00ffff00ffff008099ff00ffff00ffff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Project ProjectGUID="{BDC07ECA-0B5E-4481-ACC5-732B74F5052B}" TargetNetId="192.168.4.1.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{288AA0BA-40D9-463D-9FBA-A976EE29A467}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{652A3285-53EC-B38E-BB5F-87FE824F6341}">
+					<Name>PLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>Fixt1.I</Name>
+							<Type GUID="{ED9170A4-8881-107B-7EB7-B4C5DC187627}">Input</Type>
+						</Var>
+						<Var>
+							<Name>Fixt2.I</Name>
+							<Type GUID="{ED9170A4-8881-107B-7EB7-B4C5DC187627}">Input</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RCD_fuse_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_24VDC_Fuse_TBA1_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_AIEnergyMeterCbFbOK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_24VDC_Fuse1_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_24VDC_Fuse2_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_24VDC_Fuse3_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Reserve_0_6</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_24VDC_PowerSupply_Lightning_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_TBA2FCB8_Cb_fbb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_AirConditioner_MainCabinet_Error_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD1_PowerSupply_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD2_PowerSupply_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Ventilation_Malfunction_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Ventilation_Operating_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_BGB1_door_lmt_Sw1_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_BGB1_door_lmt_Sw2_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PowerSource_AW1_PowerSupply_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PowerSource_AW1_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PowerSource_AW2_PowerSupply_fdb</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PowerSource_AW2_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RC1_PowerSupply_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RC2_PowerSupply_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_RD2_Open</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_RD2_Close</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD2_isReady</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD2_isOpen_top</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD2_safetyedge</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_CompressedAir_Pressure_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_FlowRate_Sensor_outputA</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_FlowRate_Sensor_outputB</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_WireEnd_Sensor_R1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_WireEnd_Sensor_R2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_PowerON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_PowerOFF</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_Reset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_Start</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_ack_LB</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_Rbt_Start_Stop</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD1_isReady</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD1_isOpen_top</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_RD1_Safetyedge</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_ControlOn</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Reserve_201_2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Reserve_201_3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Reserve_201_4</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Reserve_201_5</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_PB_preAck_UB2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.ix_Reserve_201_7</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.start</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.start1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iState</Name>
+							<Comment><![CDATA[	Part state 0=OK, 1=NOK]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iStatus</Name>
+							<Comment><![CDATA[	0 Auto -- 1 Auto Startup -- 2 Manual -- 3 Error -- 4 LineMode -- 5 PowerOn -- 6 EnergySave -- 7 SafeOk]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>MH.iPartType</Name>
+							<Comment><![CDATA[	Part type 1=Long, 0=Short]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iExists</Name>
+							<Comment><![CDATA[	Part exist]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iPartId</Name>
+							<Comment><![CDATA[	Unique Part Id (DMC Serial Number)]]></Comment>
+							<Type>DINT</Type>
+						</Var>
+						<Var>
+							<Name>MH.iGateOpenRequest</Name>
+							<Comment><![CDATA[	Open handling gate]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iGateCloseRequest</Name>
+							<Comment><![CDATA[	Close handling gate]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iPickJobProceed</Name>
+							<Comment><![CDATA[	Pick job active]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iDropJobProceed</Name>
+							<Comment><![CDATA[	Drop job active]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iRaiseFinished1</Name>
+							<Comment><![CDATA[	Handshake for raise/ Robot reach at out off fixture pos]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iRaiseFinished2</Name>
+							<Comment><![CDATA[	Handshake for reduce/Robot reach at into fixture pos]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iReduceFinished1</Name>
+							<Comment><![CDATA[	Handshake for pick job end]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iReduceFinished2</Name>
+							<Comment><![CDATA[	Handshake for drop job end]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iPickJobOK</Name>
+							<Comment><![CDATA[	Robot in station area/robot infront of cell area]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iDropJobOK</Name>
+							<Comment><![CDATA[	PickJobOK]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iInArea</Name>
+							<Comment><![CDATA[	DropJobOK]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iPickDropProceed</Name>
+							<Comment><![CDATA[	InArea]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iGripper1ClosedAck</Name>
+							<Comment><![CDATA[	PickDropProceed]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iGripper1OpenedAck</Name>
+							<Comment><![CDATA[	Gripper1OpenedAck]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iGripper2ClosedAck</Name>
+							<Comment><![CDATA[	Gripper2ClosedAck]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iGripper2OpenedAck</Name>
+							<Comment><![CDATA[	Gripper2OpenedAck]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iFeatureBit6</Name>
+							<Comment><![CDATA[	Free use]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.iFeatureBit7</Name>
+							<Comment><![CDATA[	Free use]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_CA1_PowerON_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_RD2_PowerON_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_FXC1_Safe_24VDC_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_FXC2_Safe_24VDC_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_AW1_PowerSource_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_AW2_PowerSource_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_FXC1_Safe_AirON_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_FXC2_Safe_AirON_vs</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_CA1_EStop_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_UB3_EStop_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_UB2_EStop_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_RD2_isClosed_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_CA1_EStop_ch2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_UB3_EStop_ch2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_UB2_EStop_ch2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_RD2_isClosed_ch2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_UB1_EStop_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_LB1_InputArea_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_SW_AutomaticMode</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_RD1_isClosed_ch1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_UB1_EStop_ch2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_SW_ManualMode</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.ixf_RD1_isClosed_ch2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>WeldRobot.In</Name>
+							<Type GUID="{4BBCE1E1-9DC8-3536-C028-BA46CE441BE0}">WeldRobotIn</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>Fixt1.O</Name>
+							<Type GUID="{309E5387-2C65-08D2-3A3A-DD51F9D67497}">Output</Type>
+						</Var>
+						<Var>
+							<Name>Fixt2.O</Name>
+							<Type GUID="{309E5387-2C65-08D2-3A3A-DD51F9D67497}">Output</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Light_InputArea_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Light_WorkArea_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_AirConditionerTurn_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_CabinetLight_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_ControlPixelCameraST9100</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_CompressedAir_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_GasON_Rob1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_blowOut_Rob1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_GasON_Rob2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_blowOut_Rob2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_GasON_Rob3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_blowOut_Rob3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_GasON_Rob4</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Valve_blowOut_Rob4</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_1_6</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_IL_preAck_Box_UB2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_4</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_5</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_6</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_2_7</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_4</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_5</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_6</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_3_7</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_RD2_open_narrow_hight</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_RD2_open_FullHight</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_RD2_close</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Ventilation_ON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_6_0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_6_1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_6_2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_6_3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_IL_PowerON</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_IL_Reset_PB</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_IL_Start_PB</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_IL_ack_LB_PB</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_IL_RbtStartStop_PB</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_200_5</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_200_6</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_200_7</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_4</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_5</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_6</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_201_7</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_RD1_open_narrow_hight</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_RD1_open_fullHight</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_RD1_close</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Gen.qx_Reserve_202_3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qStatus</Name>
+							<Comment><![CDATA[	0 Auto -- 1 Auto Startup -- 2 Manual -- 3 Error -- 4 LineMode -- 5 PowerOn -- 6 EnergySave -- 7 SafeOk]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>MH.qState</Name>
+							<Comment><![CDATA[	Part state 0=OK, 1=NOK]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qPartType</Name>
+							<Comment><![CDATA[	Part type 1=Long, 0=Short]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qTime_Stamp</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>DATE_AND_TIME</Type>
+						</Var>
+						<Var>
+							<Name>MH.qPartId</Name>
+							<Comment><![CDATA[	Unique Part Id (DMC Serial Number)]]></Comment>
+							<Type>DINT</Type>
+						</Var>
+						<Var>
+							<Name>MH.qExists</Name>
+							<Comment><![CDATA[	Part exist]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qRequest</Name>
+							<Comment><![CDATA[	20 - Pick, 10 - Drop]]></Comment>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>MH.qRequestPartType</Name>
+							<Comment><![CDATA[	Part types]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qGateOpened</Name>
+							<Comment><![CDATA[	Handling gate opened]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qGateClosed</Name>
+							<Comment><![CDATA[	Handling gate closed]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qFixtureReady</Name>
+							<Comment><![CDATA[	Postioner in Cube]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qRaiseEnable1</Name>
+							<Comment><![CDATA[	Handshake for raise to go all the way OUT]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qRaiseEnable2</Name>
+							<Comment><![CDATA[	Handshake for raise to go all the way OUT]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qReduceEnable1</Name>
+							<Comment><![CDATA[	Handshake for reduce to go all the way IN]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qReduceEnable2</Name>
+							<Comment><![CDATA[	Handshake for reduce to go all the way IN]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qPickJobAck</Name>
+							<Comment><![CDATA[	Handshake for pick job end]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qDropJobAck</Name>
+							<Comment><![CDATA[	Handshake for drop job end]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qHold</Name>
+							<Comment><![CDATA[	Robot hold]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qGripper1ReadyToClose</Name>
+							<Comment><![CDATA[	Gripper1ReadyToClose]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qGripper1ReadyToOpen</Name>
+							<Comment><![CDATA[	Gripper1ReadyToOpen]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qGripper2ReadyToClose</Name>
+							<Comment><![CDATA[	Gripper2ReadyToClose]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qGripper2ReadyToOpen</Name>
+							<Comment><![CDATA[	Gripper2ReadyToOpen]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qFeatureBit6</Name>
+							<Comment><![CDATA[	Free use]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MH.qFeatureBit7</Name>
+							<Comment><![CDATA[	Free use]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_CA1_PowerON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_RD2_PowerON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_FXC1_Safe_24VDC</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_FXC2_Safe_24VDC</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_AW1_PowerON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_AW2_PowerON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_FXC1_Safe_AirON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_FXC2_Safe_AirON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30020_0</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30020_1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30020_2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30020_3</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_RD1_PowerON</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30100_1</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30100_2</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.qxf_Reserve_30100_3</Name>
+							<Comment><![CDATA[	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.sRun</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Safety.Ack</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>WeldRobot.Out</Name>
+							<Type GUID="{9B724B9C-5095-8350-5AB6-16107B1CE374}">WeldRobotOut</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="8" AreaNo="4">
+						<Name>PlcTask Retains</Name>
+						<Var>
+							<Name>Fixt1.Seq.Step</Name>
+							<Type>INT</Type>
+							<InOut>7</InOut>
+						</Var>
+						<Var>
+							<Name>Fixt2.Seq.Step</Name>
+							<Type>INT</Type>
+							<InOut>7</InOut>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+		<Io>
+			<Device Id="1" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="192.168.4.1.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+				<Name>Device 1 (EtherCAT)</Name>
+				<AddressInfo>
+					<Pnp>
+						<DeviceDesc></DeviceDesc>
+						<DeviceName></DeviceName>
+						<DeviceData>000000000000</DeviceData>
+					</Pnp>
+				</AddressInfo>
+				<Image Id="1" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Box Id="1" BoxType="9099">
+					<Name>Term 1 (EK1100)</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100" PortABoxInfo="#x00ffffff"/>
+					<Box Id="2" BoxType="9099">
+						<Name>Term 2 (EL1008)</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000001">
+							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="4" BoxType="9099" BoxFlags="#x00000020">
+						<Name>Term 4 (EL1904)</Name>
+						<ImageId>118</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x07703052" RevisionNo="#x00130000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="1" Type="EL1904, 4 Ch. Safety Input 24V, TwinSAFE" Desc="EL1904" PortABoxInfo="#x01000002">
+							<SyncMan>001000012600010001000000400000010001001026010000</SyncMan>
+							<SyncMan>001100012200010002000000400000010001001122010000</SyncMan>
+							<SyncMan>001206002400010003000000000000000600001224010000</SyncMan>
+							<SyncMan>001906002000010004000000000000000600001920010000</SyncMan>
+							<Fmmu>0000000000000000001200020100000001000000000000000000000000000000</Fmmu>
+							<Fmmu>0000000000000000001900010100000002000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<Pdo Name="TxPDO" Index="#x1a00" Flags="#x0090" SyncMan="3">
+								<Entry Name="FSOE__FSoE Slave CMD" Index="#x6000" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="FSOE__InputChannel1" Index="#x6001" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__InputChannel2" Index="#x6001" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__InputChannel3" Index="#x6001" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__InputChannel4" Index="#x6001" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Slave CRC_0" Index="#x6000" Sub="#x03">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Slave ConnID" Index="#x6000" Sub="#x02">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="RxPDO" Index="#x1600" InOut="1" Flags="#x0090" SyncMan="2">
+								<Entry Name="FSOE__FSoE Master CMD" Index="#x7000" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="FSOE__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Master CRC_0" Index="#x7000" Sub="#x03">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Master ConnID" Index="#x7000" Sub="#x02">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="5001"/>
+							<Slot Name="">
+								<SlotData>0000010001000400000000000000000000000000000000000000000000000000</SlotData>
+								<ModuleIdent>190</ModuleIdent>
+								<Module Id="#x03090001" Type="FSOES" Class="190">
+									<Name>Module 1 (FSOES)</Name>
+									<ImageId>118</ImageId>
+									<ModuleData>02000000be00000000000c000000000000000000000000000000000000000000</ModuleData>
+									<PdoIndex>6656</PdoIndex>
+									<PdoIndex>5632</PdoIndex>
+									<CoeProfile ProfileNo="#x00001389"/>
+								</Module>
+							</Slot>
+						</EtherCAT>
+					</Box>
+					<Box Id="5" BoxType="9099" BoxFlags="#x00000020">
+						<Name>Term 5 (EL2904)</Name>
+						<ImageId>118</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0b583052" RevisionNo="#x00130000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="2" Type="EL2904, 4 Ch. Safety Output 24V, 0.5A, TwinSAFE" Desc="EL2904" PortABoxInfo="#x01000004">
+							<SyncMan>001000012600010001000000400000010001001026010000</SyncMan>
+							<SyncMan>001100012200010002000000400000010001001122010000</SyncMan>
+							<SyncMan>001208002400010003000000000000000800001224010000</SyncMan>
+							<SyncMan>001906002000010004000000000000000600001920010000</SyncMan>
+							<Fmmu>0000000000000000001200020100000001000000000000000000000000000000</Fmmu>
+							<Fmmu>0000000000000000001900010100000002000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0018f400f418f400</BootStrapData>
+							<Pdo Name="TxPDO" Index="#x1a00" Flags="#x0090" SyncMan="3">
+								<Entry Name="FSOE__FSoE Slave CMD" Index="#x6000" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="FSOE__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Slave CRC_0" Index="#x6000" Sub="#x03">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Slave ConnID" Index="#x6000" Sub="#x02">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="RxPDO" Index="#x1600" InOut="1" Flags="#x0090" SyncMan="2">
+								<Entry Name="FSOE__FSoE Master CMD" Index="#x7000" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="FSOE__OutputChannel1" Index="#x7001" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__OutputChannel2" Index="#x7001" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__OutputChannel3" Index="#x7001" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__OutputChannel4" Index="#x7001" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Master CRC_0" Index="#x7000" Sub="#x03">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="FSOE__FSoE Master ConnID" Index="#x7000" Sub="#x02">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="RxPDO" Index="#x1601" InOut="1" Flags="#x0090" SyncMan="2">
+								<Entry Name="Output Channel 1" Index="#x7010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Output Channel 2" Index="#x7010" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Output Channel 3" Index="#x7010" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Output Channel 4" Index="#x7010" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000000C}">ARRAY [0..11] OF BIT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="5001"/>
+							<CoeProfile ProfileNo="13112201"/>
+							<Slot Name="">
+								<SlotData>0000010001000400000000000000000000000000000000000000000000000000</SlotData>
+								<ModuleIdent>290</ModuleIdent>
+								<Module Id="#x03090002" Type="FSOES" Class="290">
+									<Name>Module 1 (FSOES)</Name>
+									<ImageId>118</ImageId>
+									<ModuleData>020000002201000000000c000000000000000000000000000000000000000000</ModuleData>
+									<PdoIndex>6656</PdoIndex>
+									<PdoIndex>5632</PdoIndex>
+									<CoeProfile ProfileNo="#x00001389"/>
+								</Module>
+							</Slot>
+							<Slot Name="">
+								<SlotData>0000010001000400000000000000000000000000000000000000000000000000</SlotData>
+								<ModuleIdent>200</ModuleIdent>
+								<Module Id="#x03090003" Type="DO" Class="200">
+									<Name>Module 2 (DO)</Name>
+									<ImageId>118</ImageId>
+									<ModuleData>02000000c8000000000004000000000000000000000000000000000000000000</ModuleData>
+									<PdoIndex>5633</PdoIndex>
+								</Module>
+							</Slot>
+						</EtherCAT>
+					</Box>
+					<Box Id="6" BoxType="9099">
+						<Name>Term 6 (EL2008)</Name>
+						<ImageId>1001</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d83052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2008 8Ch. Dig. Output 24V, 0.5A" Desc="EL2008" PortABoxInfo="#x01000005">
+							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
+							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1604" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1605" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1606" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1607" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="3" BoxType="9099" BoxFlags="#x00000020">
+						<Name>Term 3 (EL6910)</Name>
+						<ImageId>1002</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x1afe3052" RevisionNo="#x00150000" InfoDataAddr="true" RepeatSupport="true" TimeoutStateChange1="5000" TimeoutMailbox2="10000" TComSupport="true" PortPhys="51" DebugMemory="8" SafetyLogicSupported="true" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6910, TwinSAFE PLC" Desc="EL6910" PortABoxInfo="#x01000006">
+							<SyncMan>001000012600010001000000000100010001001026010000</SyncMan>
+							<SyncMan>001100012200010002000000000100010001001122010000</SyncMan>
+							<SyncMan>00120f002400010003000000000000000200001224010000</SyncMan>
+							<SyncMan>001d0e002000010004000000000000000200001d20010000</SyncMan>
+							<SyncMan>002e00002400000003000000000000000000002e24000000</SyncMan>
+							<SyncMan>002f00002000000004000000000000000000002f20000000</SyncMan>
+							<Fmmu>0000000000000000001200020100000001000000060000000200000000000000</Fmmu>
+							<Fmmu>0000000000000000001d00010100000002000000060000000300000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<Fmmu>0000000000000000000000020000000001000000060000000400010000000000</Fmmu>
+							<Fmmu>0000000000000000000000010000000002000000060000000500010000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<MBoxUserCmdData>004003000a0000001f000000030010000000000000000000000000000000000020f31005020000000100456e61626c6520446961674d65737361676520617320656d657267656e637900</MBoxUserCmdData>
+							<Pdo Name="ConnectionInputs" Index="#x1a00" Flags="#x2011" SyncMan="3">
+								<Entry Name="TwinSafeGroup1.Term 4 (EL1904) - Module 1 (FSOES)_3 TxPDO" Index="#x7000" Sub="#x01">
+									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.Term 5 (EL2904) - Module 1 (FSOES)_4 TxPDO" Index="#x7000" Sub="#x02">
+									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="ConnectionOutputs" Index="#x1600" InOut="1" Flags="#x2011" SyncMan="2">
+								<Entry Name="TwinSafeGroup1.Term 4 (EL1904) - Module 1 (FSOES)_3 RxPDO" Index="#x6000" Sub="#x01">
+									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.Term 5 (EL2904) - Module 1 (FSOES)_4 RxPDO" Index="#x6000" Sub="#x02">
+									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="StandardOutputs" Index="#x17f0" InOut="1" Flags="#x2011" SyncMan="2">
+								<Entry Name="TwinSafeGroup1.ErrorAcknowledgement_1" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.Run_2" Index="#x6000" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="FSLOGIC Inputs" Index="#x1bff" Flags="#x0011" SyncMan="3">
+								<Entry Name="Safe Logic State" Index="#xf100" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Cycle Counter" Index="#xf100" Sub="#x02">
+									<Type>USINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="FSLOGIC Outputs" Index="#x17ff" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000010}">ARRAY [0..1] OF BYTE</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="5001"/>
+						</EtherCAT>
+					</Box>
+				</Box>
+				<EtherCAT/>
+			</Device>
+		</Io>
+	</Project>
+	<Mappings>
+		<OwnerA Name="TIID^Device 1 (EtherCAT)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
+				<Link VarA="Term 1 (EK1100)^Term 5 (EL2904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="ConnectionInputs^TwinSafeGroup1.Term 5 (EL2904) - Module 1 (FSOES)_4 TxPDO"/>
+				<Link VarA="Term 1 (EK1100)^Term 5 (EL2904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="ConnectionOutputs^TwinSafeGroup1.Term 5 (EL2904) - Module 1 (FSOES)_4 RxPDO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 4 (EL1904)">
+				<Link VarA="Term 1 (EK1100)^Term 3 (EL6910)^ConnectionInputs^TwinSafeGroup1.Term 4 (EL1904) - Module 1 (FSOES)_3 TxPDO" VarB="Module 1 (FSOES)^RxPDO^FSOE"/>
+				<Link VarA="Term 1 (EK1100)^Term 3 (EL6910)^ConnectionOutputs^TwinSafeGroup1.Term 4 (EL1904) - Module 1 (FSOES)_3 RxPDO" VarB="Module 1 (FSOES)^TxPDO^FSOE"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIPC^PLC^PLC Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
+				<Link VarA="PlcTask Outputs^Safety.Ack" VarB="StandardOutputs^TwinSafeGroup1.ErrorAcknowledgement_1"/>
+				<Link VarA="PlcTask Outputs^Safety.sRun" VarB="StandardOutputs^TwinSafeGroup1.Run_2"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>

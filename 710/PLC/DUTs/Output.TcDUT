@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Output" Id="{fdde274a-67ea-4e58-80bf-f404bd5c3e0e}">
+    <Declaration><![CDATA[TYPE Output :
+STRUCT
+o_CC1_CLAMPING_UNIT1_3_WP	:	BOOL	;	//	Clamping Circuit 1 Clamping Unit 1-3  WP
+o_CC1_CLAMPING_UNIT1_3_HP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 1-3  HP
+o_CC2_CLAMPING_UNIT2_3_WP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 1-3  WP
+o_CC2_CLAMPING_UNIT2_3_HP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 1-3  HP
+o_CC3_CLAMPING_UNIT3_3_WP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 1-3  WP
+o_CC3_CLAMPING_UNIT3_3_HP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 1-3  HP
+o_CC4_CLAMPING_UNIT4_3_WP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 1-3  WP
+o_CC4_CLAMPING_UNIT4_3_HP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 1-3  HP
+o_CC5_CLAMPING_UNIT5_1_WP	:	Bool	;	//	Clamping Circuit 5 Clamping Unit 1  WP
+o_CC5_CLAMPING_UNIT5_1_HP	:	Bool	;	//	Clamping Circuit 5 Clamping Unit 1  HP
+o_CC6_CLAMPING_UNIT6_1_WP	:	Bool	;	//	Clamping Circuit 6 Clamping Unit 1  WP
+o_CC6_CLAMPING_UNIT6_1_HP	:	Bool	;	//	Clamping Circuit 6 Clamping Unit 1  HP
+o_RESERVE_1_4	:	Bool	;	//	Free
+o_RESERVE_1_5	:	Bool	;	//	Free
+o_RESERVE_1_6	:	Bool	;	//	Free
+o_RESERVE_1_7	:	Bool	;	//	Free
+o_RESERVE_2_0	:	Bool	;	//	Free
+o_RESERVE_2_1	:	Bool	;	//	Free
+o_RESERVE_2_2	:	Bool	;	//	Free
+o_RESERVE_2_3	:	Bool	;	//	Free
+o_RESERVE_2_4	:	Bool	;	//	Free
+o_RESERVE_2_5	:	Bool	;	//	Free
+o_RESERVE_2_6	:	Bool	;	//	Free
+o_RESERVE_2_7	:	Bool	;	//	Free
+o_RESERVE_3_0	:	Bool	;	//	Free
+o_RESERVE_3_1	:	Bool	;	//	Free
+o_RESERVE_3_2	:	Bool	;	//	Free
+o_RESERVE_3_3	:	Bool	;	//	Free
+o_RESERVE_3_4	:	Bool	;	//	Free
+o_RESERVE_3_5	:	Bool	;	//	Free
+o_RESERVE_3_6	:	Bool	;	//	Free
+o_RESERVE_3_7	:	Bool	;	//	Free
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

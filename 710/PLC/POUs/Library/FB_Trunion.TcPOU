@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_Trunion" Id="{f6a80b02-a72e-41bb-a25a-77668bc61a6c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Trunion
+VAR_INPUT
+    // Commands
+    Cmd_20      : BOOL;
+    Cmd_0       : BOOL;   // 0 degree
+    Cmd_M45     : BOOL;   // -45 degree
+    Cmd_M80     : BOOL;   // -80 degree
+    Start       : BOOL;
+    Stop        : BOOL;
+ 
+    // Feedbacks
+    Pos_20      : BOOL;
+    Pos_0       : BOOL;   // 0 degree feedback
+    Pos_M45     : BOOL;
+    Pos_M80     : BOOL;
+END_VAR
+ 
+VAR_OUTPUT
+    // Motion Outputs
+    Move_20     : BOOL;
+    Move_0      : BOOL;   // Move to 0 degree
+    Move_M45    : BOOL;
+    Move_M80    : BOOL;
+ 
+    // Reached Outputs
+    Reached_20  : BOOL;
+    Reached_0   : BOOL;   // Reached 0 degree
+    Reached_M45 : BOOL;
+    Reached_M80 : BOOL;
+END_VAR
+ 
+VAR
+    Target_20   : BOOL;
+    Target_0    : BOOL;   // Target 0 degree
+    Target_M45  : BOOL;
+    Target_M80  : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//--------------------------------------------------
+// Command Selection Logic
+//--------------------------------------------------
+IF Start THEN
+    Target_20  := Cmd_20;
+    Target_0   := Cmd_0;
+    Target_M45 := Cmd_M45;
+    Target_M80 := Cmd_M80;
+END_IF;
+ 
+// Stop resets everything
+IF Stop THEN
+    Target_20  := FALSE;
+    Target_0   := FALSE;
+    Target_M45 := FALSE;
+    Target_M80 := FALSE;
+ 
+    Move_20  := FALSE;
+    Move_0   := FALSE;
+    Move_M45 := FALSE;
+    Move_M80 := FALSE;
+END_IF;
+ 
+//--------------------------------------------------
+// Movement Logic
+//--------------------------------------------------
+ 
+// Move to 20°
+IF Target_20 AND NOT Pos_20 THEN
+    Move_20 := TRUE;
+ELSE
+    Move_20 := FALSE;
+END_IF;
+ 
+// Move to 0°
+IF Target_0 AND NOT Pos_0 THEN
+    Move_0 := TRUE;
+ELSE
+    Move_0 := FALSE;
+END_IF;
+ 
+// Move to -45°
+IF Target_M45 AND NOT Pos_M45 THEN
+    Move_M45 := TRUE;
+ELSE
+    Move_M45 := FALSE;
+END_IF;
+ 
+// Move to -80°
+IF Target_M80 AND NOT Pos_M80 THEN
+    Move_M80 := TRUE;
+ELSE
+    Move_M80 := FALSE;
+END_IF;
+ 
+//--------------------------------------------------
+// Reached Status
+//--------------------------------------------------
+Reached_20  := Pos_20;
+Reached_0   := Pos_0;
+Reached_M45 := Pos_M45;
+Reached_M80 := Pos_M80;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Trunion">
+      <LineId Id="157" Count="60" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_TurnTable_0_180" Id="{f66d59a1-2890-4604-ac64-b1ee57cd8724}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_TurnTable_0_180
+VAR_INPUT
+	// Inputs
+    Start_0     : BOOL;
+    Start_180   : BOOL;
+    LS_0        : BOOL;
+    LS_180      : BOOL;
+    StopBtn     : BOOL;
+
+END_VAR
+VAR_OUTPUT
+	// Outputs
+    Motor_CW    : BOOL;
+    Motor_CCW   : BOOL;
+    Reached_180 : BOOL;
+    Reached_0   : BOOL;
+END_VAR
+VAR
+	// Internal states
+    Move_0      : BOOL := FALSE;
+    Move_180    : BOOL := FALSE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// =========================
+// COMMAND LOGIC
+// =========================
+// Move to 0°
+IF Start_0 AND NOT LS_0 THEN
+    Move_0 := TRUE;
+    Move_180 := FALSE;
+END_IF;
+
+// Move to 180°
+IF Start_180 AND NOT LS_180 THEN
+    Move_180 := TRUE;
+    Move_0 := FALSE;
+END_IF;
+
+// =========================
+// STOP LOGIC
+// =========================
+IF StopBtn THEN
+    Move_0 := FALSE;
+    Move_180 := FALSE;
+END_IF;
+
+// =========================
+// LIMIT SWITCH STOP
+// =========================
+IF LS_0 THEN
+    Move_0 := FALSE;
+END_IF;
+IF LS_180 THEN
+    Move_180 := FALSE;
+END_IF;
+
+// =========================
+// SAFETY: BOTH LIMIT ACTIVE
+// =========================
+IF LS_0 AND LS_180 THEN
+    Move_0 := FALSE;
+    Move_180 := FALSE;
+END_IF;
+
+// =========================
+// OUTPUT LOGIC
+// =========================
+Motor_CCW := Move_0;     // Move toward 0°
+Motor_CW  := Move_180;   // Move toward 180°
+
+// =========================
+// INTERLOCK (VERY IMPORTANT)
+// =========================
+IF Motor_CW THEN
+    Motor_CCW := FALSE;
+END_IF;
+IF Motor_CCW THEN
+    Motor_CW := FALSE;
+END_IF;
+
+// =========================
+// POSITION REACHED SIGNALS
+// =========================
+Reached_0   := LS_0 AND NOT Move_0;
+Reached_180 := LS_180 AND NOT Move_180;
+ 
+// =========================
+// COMMAND LOGIC
+// =========================
+// Move to 0°
+
+IF Start_0 AND NOT LS_0 THEN
+    Move_0 := TRUE;
+    Move_180 := FALSE;
+END_IF;
+// Move to 180°
+IF Start_180 AND NOT LS_180 THEN
+    Move_180 := TRUE;
+    Move_0 := FALSE;
+END_IF;
+
+// =========================
+// STOP LOGIC
+// =========================
+IF StopBtn THEN
+    Move_0 := FALSE;
+    Move_180 := FALSE;
+END_IF;
+
+// =========================
+// LIMIT SWITCH STOP
+// =========================
+IF LS_0 THEN
+    Move_0 := FALSE;
+END_IF;
+IF LS_180 THEN
+    Move_180 := FALSE;
+END_IF;
+
+// =========================
+// SAFETY: BOTH LIMIT ACTIVE
+// =========================
+IF LS_0 AND LS_180 THEN
+    Move_0 := FALSE;
+    Move_180 := FALSE;
+END_IF;
+
+// =========================
+// OUTPUT LOGIC
+// =========================
+Motor_CCW := Move_0;     // Move toward 0°
+Motor_CW  := Move_180;   // Move toward 180°
+
+// =========================
+// INTERLOCK (VERY IMPORTANT)
+// =========================
+IF Motor_CW THEN
+    Motor_CCW := FALSE;
+END_IF;
+IF Motor_CCW THEN
+    Motor_CW := FALSE;
+END_IF;
+
+// =========================
+// POSITION REACHED SIGNALS
+// =========================
+Reached_0   := LS_0 AND NOT Move_0;
+Reached_180 := LS_180 AND NOT Move_180;
+ ]]></ST>
+    </Implementation>
+    <LineIds Name="FB_TurnTable_0_180">
+      <LineId Id="25" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="39" Count="2" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="51" Count="1" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="62" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="256" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="85" Count="1" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="100" Count="1" />
+      <LineId Id="103" Count="0" />
+      <LineId Id="105" Count="0" />
+      <LineId Id="107" Count="0" />
+      <LineId Id="109" Count="0" />
+      <LineId Id="111" Count="1" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="118" Count="0" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="122" Count="0" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="126" Count="0" />
+      <LineId Id="128" Count="0" />
+      <LineId Id="130" Count="1" />
+      <LineId Id="133" Count="0" />
+      <LineId Id="135" Count="0" />
+      <LineId Id="137" Count="0" />
+      <LineId Id="139" Count="2" />
+      <LineId Id="143" Count="0" />
+      <LineId Id="145" Count="0" />
+      <LineId Id="147" Count="2" />
+      <LineId Id="151" Count="0" />
+      <LineId Id="153" Count="0" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="157" Count="0" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="161" Count="0" />
+      <LineId Id="163" Count="0" />
+      <LineId Id="165" Count="0" />
+      <LineId Id="167" Count="1" />
+      <LineId Id="170" Count="0" />
+      <LineId Id="172" Count="0" />
+      <LineId Id="174" Count="0" />
+      <LineId Id="176" Count="0" />
+      <LineId Id="178" Count="0" />
+      <LineId Id="180" Count="0" />
+      <LineId Id="182" Count="1" />
+      <LineId Id="185" Count="0" />
+      <LineId Id="187" Count="0" />
+      <LineId Id="189" Count="0" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="195" Count="0" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="199" Count="0" />
+      <LineId Id="201" Count="1" />
+      <LineId Id="204" Count="0" />
+      <LineId Id="206" Count="0" />
+      <LineId Id="208" Count="0" />
+      <LineId Id="210" Count="0" />
+      <LineId Id="212" Count="0" />
+      <LineId Id="214" Count="0" />
+      <LineId Id="216" Count="1" />
+      <LineId Id="219" Count="0" />
+      <LineId Id="221" Count="0" />
+      <LineId Id="223" Count="0" />
+      <LineId Id="225" Count="0" />
+      <LineId Id="227" Count="1" />
+      <LineId Id="230" Count="0" />
+      <LineId Id="232" Count="0" />
+      <LineId Id="234" Count="0" />
+      <LineId Id="236" Count="0" />
+      <LineId Id="238" Count="0" />
+      <LineId Id="240" Count="0" />
+      <LineId Id="242" Count="0" />
+      <LineId Id="244" Count="0" />
+      <LineId Id="246" Count="1" />
+      <LineId Id="249" Count="0" />
+      <LineId Id="251" Count="0" />
+      <LineId Id="253" Count="0" />
+      <LineId Id="255" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

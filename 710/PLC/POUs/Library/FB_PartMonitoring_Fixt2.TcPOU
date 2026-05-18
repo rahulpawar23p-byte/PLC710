@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="FB_PartMonitoring_Fixt2" Id="{4e89b3cc-f4f8-4fe1-8b44-01e98f7d9711}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PartMonitoring_Fixt2
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+	qRawPart1:BOOL;
+	qRawPart2:BOOL;
+	qRawPart3:BOOL;
+	qRawPart4:BOOL;
+	qAllPartPresent:BOOL;
+	
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[qRawPart1:= (
+             fixt2.I.i_PART_CONTROL_B1 AND fixt2.I.i_PART_CONTROL_B2 AND fixt2.I.i_PART_CONTROL_B3 AND fixt2.I.i_PART_CONTROL_B4
+			 AND fixt2.I.i_PART_CONTROL_B5 AND fixt2.I.i_PART_CONTROL_B6 AND fixt2.I.i_PART_CONTROL_B7
+			 );
+qRawPart2:= (
+             fixt2.I.i_PART_CONTROL_B15 AND fixt2.I.i_PART_CONTROL_B16 AND fixt2.I.i_PART_CONTROL_B17 AND fixt2.I.i_PART_CONTROL_B18
+			 AND fixt2.I.i_PART_CONTROL_B19 AND fixt2.I.i_PART_CONTROL_B20 AND fixt2.I.i_PART_CONTROL_B21
+			 );
+qRawPart3:= (
+             fixt2.I.i_PART_CONTROL_B8 AND fixt2.I.i_PART_CONTROL_B9 AND fixt2.I.i_PART_CONTROL_B10 AND fixt2.I.i_PART_CONTROL_B11
+			 AND fixt2.I.i_PART_CONTROL_B12 AND fixt2.I.i_PART_CONTROL_B13 AND fixt2.I.i_PART_CONTROL_B14
+			 );
+qRawPart4:= (
+             fixt2.I.i_PART_CONTROL_B22 AND fixt2.I.i_PART_CONTROL_B23 AND fixt2.I.i_PART_CONTROL_B24 AND fixt2.I.i_PART_CONTROL_B25
+			 AND fixt2.I.i_PART_CONTROL_B26 AND fixt2.I.i_PART_CONTROL_B27 AND fixt2.I.i_PART_CONTROL_B28
+			 );			 
+			 
+qAllPartPresent:= (
+             fixt2.I.i_PART_CONTROL_B22 AND fixt2.I.i_PART_CONTROL_B23 AND fixt2.I.i_PART_CONTROL_B24 AND fixt2.I.i_PART_CONTROL_B25
+			 AND fixt2.I.i_PART_CONTROL_B26 AND fixt2.I.i_PART_CONTROL_B27 AND fixt2.I.i_PART_CONTROL_B28
+			 AND fixt2.I.i_PART_CONTROL_B1 AND fixt2.I.i_PART_CONTROL_B2 AND fixt2.I.i_PART_CONTROL_B3 AND fixt2.I.i_PART_CONTROL_B4
+			 AND fixt2.I.i_PART_CONTROL_B5 AND fixt2.I.i_PART_CONTROL_B6 AND fixt2.I.i_PART_CONTROL_B7
+			 AND fixt2.I.i_PART_CONTROL_B15 AND fixt2.I.i_PART_CONTROL_B16 AND fixt2.I.i_PART_CONTROL_B17 AND fixt2.I.i_PART_CONTROL_B18
+			 AND fixt2.I.i_PART_CONTROL_B19 AND fixt2.I.i_PART_CONTROL_B20 AND fixt2.I.i_PART_CONTROL_B21
+             AND fixt2.I.i_PART_CONTROL_B8 AND fixt2.I.i_PART_CONTROL_B9 AND fixt2.I.i_PART_CONTROL_B10 AND fixt2.I.i_PART_CONTROL_B11
+			 AND fixt2.I.i_PART_CONTROL_B12 AND fixt2.I.i_PART_CONTROL_B13 AND fixt2.I.i_PART_CONTROL_B14 
+			 );	]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PartMonitoring_Fixt2">
+      <LineId Id="19" Count="2" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="23" Count="2" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="27" Count="2" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="31" Count="2" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="36" Count="8" />
+      <LineId Id="35" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

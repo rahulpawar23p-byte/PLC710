@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Input" Id="{69471fe2-bd48-4121-9776-fc6523d8afaa}">
+    <Declaration><![CDATA[TYPE Input :
+STRUCT
+i_Control_Pressure_Sw_In1_BPB1	:	BOOL	;	//	Control Pressure Switch Input 1-BPB1  
+i_Control_Pressure_Sw_In2_BPB1	:	Bool	;	//	Control Pressure Switch Input 2-BPB1  
+i_Valve_Pos_BGB1	:	Bool	;	//	Valve Position-BGB1
+i_Reserve_BPB1_0_3	:	Bool	;	//	Free
+i_CC6_Clamp_1_Sensor_HP	:	Bool	;	//	Clamping Circuit 6 Clamping Unit 1 sensor  HP
+i_CC6_Clamp_1_Sensor_WP	:	Bool	;	//	Clamping Circuit 6 Clamping Unit 1 sensor  WP
+i_CC4_Clamp_3_Sensor_HP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 3 sensor  HP
+i_CC4_Clamp_3_Sensor_WP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 3 sensor  WP
+i_PART_CONTROL_B13	:	Bool	;	//	PART CONTROL  B13
+i_PART_CONTROL_B27	:	Bool	;	//	PART CONTROL  B27
+i_PART_CONTROL_B14	:	Bool	;	//	PART CONTROL  B14
+i_PART_CONTROL_B28	:	Bool	;	//	PART CONTROL  B28
+i_Reserve_BGB1_1_4	:	Bool	;	//	Free
+i_Reserve_BGB1_1_5	:	Bool	;	//	Free
+i_KEC6Salvemodule12_1	:	BOOL	;	//	Connect to KEC6 Salve module 1.2
+i_KEC6Salvemodule12_2	:	BOOL	;	//	Connect to KEC6 Salve module 1.2
+i_Reserve_2_0	:	Bool	;	//	i_Reserve_2_0
+i_Reserve_2_1	:	Bool	;	//	i_Reserve_2_1
+i_Reserve_2_2	:	Bool	;	//	i_Reserve_2_2
+i_Reserve_2_3	:	Bool	;	//	i_Reserve_2_3
+i_Reserve_2_4	:	Bool	;	//	i_Reserve_2_4
+i_Reserve_2_5	:	Bool	;	//	i_Reserve_2_5
+i_Reserve_2_6	:	Bool	;	//	i_Reserve_2_6
+i_Reserve_2_7	:	Bool	;	//	i_Reserve_2_7
+i_Reserve_3_0	:	Bool	;	//	i_Reserve_3_0
+i_Reserve_3_1	:	Bool	;	//	i_Reserve_3_1
+i_Reserve_3_2	:	Bool	;	//	i_Reserve_3_2
+i_Reserve_3_3	:	Bool	;	//	i_Reserve_3_3
+i_Reserve_3_4	:	Bool	;	//	i_Reserve_3_4
+i_Reserve_3_5	:	Bool	;	//	i_Reserve_3_5
+i_Reserve_3_6	:	Bool	;	//	i_Reserve_3_6
+i_Reserve_3_7	:	Bool	;	//	i_Reserve_3_7
+i_CC4_Clamp_1_Sensor_HP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 1 sensor  HP
+i_CC4_Clamp_1_Sensor_WP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 1 sensor  WP
+i_CC4_Clamp_2_Sensor_HP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 2 sensor  HP
+i_CC4_Clamp_2_Sensor_WP	:	Bool	;	//	Clamping Circuit 4 Clamping Unit 2 sensor  WP
+i_CC2_Clamp_3_Sensor_HP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 3 sensor  HP
+i_CC2_Clamp_3_Sensor_WP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 3 sensor  WP
+i_PART_CONTROL_B12	:	Bool	;	//	PART CONTROL  B12
+i_PART_CONTROL_B26	:	Bool	;	//	PART CONTROL  B26
+i_PART_CONTROL_B11	:	Bool	;	//	PART CONTROL  B11
+i_PART_CONTROL_B25	:	Bool	;	//	PART CONTROL  B25
+i_PART_CONTROL_B10	:	Bool	;	//	PART CONTROL  B10
+i_PART_CONTROL_B24	:	Bool	;	//	PART CONTROL  B24
+i_Reserve_5_4	:	Bool	;	//	Free
+i_Reserve_5_5	:	Bool	;	//	Free
+i_Reserve_5_6	:	Bool	;	//	Free
+i_Reserve_5_7	:	Bool	;	//	Free
+i_Reserve_6_0	:	Bool	;	//	i_Reserve_6_0
+i_Reserve_6_1	:	Bool	;	//	i_Reserve_6_1
+i_Reserve_6_2	:	Bool	;	//	i_Reserve_6_2
+i_Reserve_6_3	:	Bool	;	//	i_Reserve_6_3
+i_Reserve_6_4	:	Bool	;	//	i_Reserve_6_4
+i_Reserve_6_5	:	Bool	;	//	i_Reserve_6_5
+i_Reserve_6_6	:	Bool	;	//	i_Reserve_6_6
+i_Reserve_6_7	:	Bool	;	//	i_Reserve_6_7
+i_Reserve_7_0	:	Bool	;	//	i_Reserve_7_0
+i_Reserve_7_1	:	Bool	;	//	i_Reserve_7_1
+i_Reserve_7_2	:	Bool	;	//	i_Reserve_7_2
+i_Reserve_7_3	:	Bool	;	//	i_Reserve_7_3
+i_Reserve_7_4	:	Bool	;	//	i_Reserve_7_4
+i_Reserve_7_5	:	Bool	;	//	i_Reserve_7_5
+i_Reserve_7_6	:	Bool	;	//	i_Reserve_7_6
+i_Reserve_7_7	:	Bool	;	//	i_Reserve_7_7
+i_CC3_Clamp_1_Sensor_HP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 1 sensor  HP
+i_CC3_Clamp_1_Sensor_WP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 1 sensor  WP
+i_CC3_Clamp_2_Sensor_HP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 2 sensor  HP
+i_CC3_Clamp_2_Sensor_WP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 2 sensor  WP
+i_CC3_Clamp_3_Sensor_HP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 3 sensor  HP
+i_CC3_Clamp_3_Sensor_WP	:	Bool	;	//	Clamping Circuit 3 Clamping Unit 3 sensor  WP
+i_PART_CONTROL_B7	:	Bool	;	//	PART CONTROL  B7
+i_PART_CONTROL_B21	:	Bool	;	//	PART CONTROL  B21
+i_PART_CONTROL_B6	:	Bool	;	//	PART CONTROL  B6
+i_PART_CONTROL_B20	:	Bool	;	//	PART CONTROL  B20
+i_PART_CONTROL_B5	:	Bool	;	//	PART CONTROL  B5
+i_PART_CONTROL_B19	:	Bool	;	//	PART CONTROL  B19
+i_Reserve_9_4	:	Bool	;	//	Free
+i_Reserve_9_5	:	Bool	;	//	Free
+i_KEC8Salvemodule22_1	:	BOOL	;	//	Connect to KEC8 Salve module 2.2
+i_KEC8Salvemodule22_2	:	BOOL	;	//	Connect to KEC8 Salve module 2.2
+i_Reserve_10_0	:	Bool	;	//	i_Reserve_10_0
+i_Reserve_10_1	:	Bool	;	//	i_Reserve_10_1
+i_Reserve_10_2	:	Bool	;	//	i_Reserve_10_2
+i_Reserve_10_3	:	Bool	;	//	i_Reserve_10_3
+i_Reserve_10_4	:	Bool	;	//	i_Reserve_10_4
+i_Reserve_10_5	:	Bool	;	//	i_Reserve_10_5
+i_Reserve_10_6	:	Bool	;	//	i_Reserve_10_6
+i_Reserve_10_7	:	Bool	;	//	i_Reserve_10_7
+i_Reserve_11_0	:	Bool	;	//	i_Reserve_11_0
+i_Reserve_11_1	:	Bool	;	//	i_Reserve_11_1
+i_Reserve_11_2	:	Bool	;	//	i_Reserve_11_2
+i_Reserve_11_3	:	Bool	;	//	i_Reserve_11_3
+i_Reserve_11_4	:	Bool	;	//	i_Reserve_11_4
+i_Reserve_11_5	:	Bool	;	//	i_Reserve_11_5
+i_Reserve_11_6	:	Bool	;	//	i_Reserve_11_6
+i_Reserve_11_7	:	Bool	;	//	i_Reserve_11_7
+i_CC1_Clamp_1_Sensor_HP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 1 sensor  HP
+i_CC1_Clamp_1_Sensor_WP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 1 sensor  WP
+i_CC1_Clamp_2_Sensor_HP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 2 sensor  HP
+i_CC1_Clamp_2_Sensor_WP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 2 sensor  WP
+i_CC1_Clamp_3_Sensor_HP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 3 sensor  HP
+i_CC1_Clamp_3_Sensor_WP	:	Bool	;	//	Clamping Circuit 1 Clamping Unit 3 sensor  WP
+i_PART_CONTROL_B4	:	Bool	;	//	PART CONTROL  B4
+i_PART_CONTROL_B18	:	Bool	;	//	PART CONTROL  B18
+i_PART_CONTROL_B3	:	Bool	;	//	PART CONTROL  B3
+i_PART_CONTROL_B17	:	Bool	;	//	PART CONTROL  B17
+i_PART_CONTROL_B2	:	Bool	;	//	PART CONTROL  B2
+i_PART_CONTROL_B16	:	Bool	;	//	PART CONTROL  B16
+i_Reserve_13_4	:	Bool	;	//	Free
+i_Reserve_13_5	:	Bool	;	//	Free
+i_Reserve_13_6	:	Bool	;	//	Free
+i_Reserve_13_7	:	Bool	;	//	Free
+i_Reserve_14_0	:	Bool	;	//	i_Reserve_14_0
+i_Reserve_14_1	:	Bool	;	//	i_Reserve_14_1
+i_Reserve_14_2	:	Bool	;	//	i_Reserve_14_2
+i_Reserve_14_3	:	Bool	;	//	i_Reserve_14_3
+i_Reserve_14_4	:	Bool	;	//	i_Reserve_14_4
+i_Reserve_14_5	:	Bool	;	//	i_Reserve_14_5
+i_Reserve_14_6	:	Bool	;	//	i_Reserve_14_6
+i_Reserve_14_7	:	Bool	;	//	i_Reserve_14_7
+i_Reserve_15_0	:	Bool	;	//	i_Reserve_15_0
+i_Reserve_15_1	:	Bool	;	//	i_Reserve_15_1
+i_Reserve_15_2	:	Bool	;	//	i_Reserve_15_2
+i_Reserve_15_3	:	Bool	;	//	i_Reserve_15_3
+i_Reserve_15_4	:	Bool	;	//	i_Reserve_15_4
+i_Reserve_15_5	:	Bool	;	//	i_Reserve_15_5
+i_Reserve_15_6	:	Bool	;	//	i_Reserve_15_6
+i_Reserve_15_7	:	Bool	;	//	i_Reserve_15_7
+i_CC2_Clamp_1_Sensor_HP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 1 sensor  HP
+i_CC2_Clamp_1_Sensor_WP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 1 sensor  WP
+i_CC2_Clamp_2_Sensor_HP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 2 sensor  HP
+i_CC2_Clamp_2_Sensor_WP	:	Bool	;	//	Clamping Circuit 2 Clamping Unit 2 sensor  WP
+i_PART_CONTROL_B9	:	Bool	;	//	PART CONTROL  B9
+i_PART_CONTROL_B23	:	Bool	;	//	PART CONTROL  B23
+i_PART_CONTROL_B8	:	Bool	;	//	PART CONTROL  B8
+i_PART_CONTROL_B22	:	Bool	;	//	PART CONTROL  B22
+i_Reserve_17_0	:	Bool	;	//	Free
+i_Reserve_17_1	:	Bool	;	//	Free
+i_Reserve_17_2	:	Bool	;	//	Free
+i_Reserve_17_3	:	Bool	;	//	Free
+i_Reserve_17_4	:	Bool	;	//	Free
+i_Reserve_17_5	:	Bool	;	//	Free
+i_Reserve_17_6	:	Bool	;	//	Free
+i_Reserve_17_7	:	Bool	;	//	Free
+i_Reserve_18_0	:	Bool	;	//	i_Reserve_18_0
+i_Reserve_18_1	:	Bool	;	//	i_Reserve_18_1
+i_Reserve_18_2	:	Bool	;	//	i_Reserve_18_2
+i_Reserve_18_3	:	Bool	;	//	i_Reserve_18_3
+i_Reserve_18_4	:	Bool	;	//	i_Reserve_18_4
+i_Reserve_18_5	:	Bool	;	//	i_Reserve_18_5
+i_Reserve_18_6	:	Bool	;	//	i_Reserve_18_6
+i_Reserve_18_7	:	Bool	;	//	i_Reserve_18_7
+i_Reserve_19_0	:	Bool	;	//	i_Reserve_19_0
+i_Reserve_19_1	:	Bool	;	//	i_Reserve_19_1
+i_Reserve_19_2	:	Bool	;	//	i_Reserve_19_2
+i_Reserve_19_3	:	Bool	;	//	i_Reserve_19_3
+i_Reserve_19_4	:	Bool	;	//	i_Reserve_19_4
+i_Reserve_19_5	:	Bool	;	//	i_Reserve_19_5
+i_Reserve_19_6	:	Bool	;	//	i_Reserve_19_6
+i_Reserve_19_7	:	Bool	;	//	i_Reserve_19_7
+i_Reserve_20_0	:	Bool	;	//	i_Reserve_20_0
+i_Reserve_20_1	:	Bool	;	//	i_Reserve_20_1
+i_Reserve_20_2	:	Bool	;	//	i_Reserve_20_2
+i_Reserve_20_3	:	Bool	;	//	i_Reserve_20_3
+i_Reserve_20_4	:	Bool	;	//	i_Reserve_20_4
+i_Reserve_20_5	:	Bool	;	//	i_Reserve_20_5
+i_Reserve_20_6	:	Bool	;	//	i_Reserve_20_6
+i_Reserve_20_7	:	Bool	;	//	i_Reserve_20_7
+i_Reserve_21_0	:	Bool	;	//	i_Reserve_21_0
+i_Reserve_21_1	:	Bool	;	//	i_Reserve_21_1
+i_Reserve_21_2	:	Bool	;	//	i_Reserve_21_2
+i_Reserve_21_3	:	Bool	;	//	i_Reserve_21_3
+i_Reserve_21_4	:	Bool	;	//	i_Reserve_21_4
+i_Reserve_21_5	:	Bool	;	//	i_Reserve_21_5
+i_Reserve_21_6	:	Bool	;	//	i_Reserve_21_6
+i_Reserve_21_7	:	Bool	;	//	i_Reserve_21_7
+i_Reserve_22_0	:	Bool	;	//	i_Reserve_22_0
+i_Reserve_22_1	:	Bool	;	//	i_Reserve_22_1
+i_Reserve_22_2	:	Bool	;	//	i_Reserve_22_2
+i_Reserve_22_3	:	Bool	;	//	i_Reserve_22_3
+i_Reserve_22_4	:	Bool	;	//	i_Reserve_22_4
+i_Reserve_22_5	:	Bool	;	//	i_Reserve_22_5
+i_Reserve_22_6	:	Bool	;	//	i_Reserve_22_6
+i_Reserve_22_7	:	Bool	;	//	i_Reserve_22_7
+i_Reserve_23_0	:	Bool	;	//	i_Reserve_23_0
+i_Reserve_23_1	:	Bool	;	//	i_Reserve_23_1
+i_Reserve_23_2	:	Bool	;	//	i_Reserve_23_2
+i_Reserve_23_3	:	Bool	;	//	i_Reserve_23_3
+i_Reserve_23_4	:	Bool	;	//	i_Reserve_23_4
+i_Reserve_23_5	:	Bool	;	//	i_Reserve_23_5
+i_Reserve_23_6	:	Bool	;	//	i_Reserve_23_6
+i_Reserve_23_7	:	Bool	;	//	i_Reserve_23_7
+i_CC5_Clamp_1_Sensor_HP	:	Bool	;	//	Clamping Circuit 5 Clamping Unit 1 sensor  HP
+i_CC5_Clamp_1_Sensor_WP	:	Bool	;	//	Clamping Circuit 5 Clamping Unit 1 sensor  WP
+i_PART_CONTROL_B1	:	Bool	;	//	PART CONTROL  B1
+i_PART_CONTROL_B15	:	Bool	;	//	PART CONTROL  B15
+i_Reserve_24_4	:	Bool	;	//	Free
+i_Reserve_24_5	:	Bool	;	//	Free
+i_Reserve_24_6	:	Bool	;	//	Free
+i_Reserve_24_7	:	Bool	;	//	Free
+i_Reserve_25_0	:	Bool	;	//	Free
+i_Reserve_25_1	:	Bool	;	//	Free
+i_Reserve_25_2	:	Bool	;	//	Free
+i_Reserve_25_3	:	Bool	;	//	Free
+i_Reserve_25_4	:	Bool	;	//	Free
+i_Reserve_25_5	:	Bool	;	//	Free
+i_Reserve_25_6	:	Bool	;	//	Free
+i_Reserve_25_7	:	Bool	;	//	Free
+i_Reserve_26_0	:	Bool	;	//	i_Reserve_26_0
+i_Reserve_26_1	:	Bool	;	//	i_Reserve_26_1
+i_Reserve_26_2	:	Bool	;	//	i_Reserve_26_2
+i_Reserve_26_3	:	Bool	;	//	i_Reserve_26_3
+i_Reserve_26_4	:	Bool	;	//	i_Reserve_26_4
+i_Reserve_26_5	:	Bool	;	//	i_Reserve_26_5
+i_Reserve_26_6	:	Bool	;	//	i_Reserve_26_6
+i_Reserve_26_7	:	Bool	;	//	i_Reserve_26_7
+i_Reserve_27_0	:	Bool	;	//	i_Reserve_27_0
+i_Reserve_27_1	:	Bool	;	//	i_Reserve_27_1
+i_Reserve_27_2	:	Bool	;	//	i_Reserve_27_2
+i_Reserve_27_3	:	Bool	;	//	i_Reserve_27_3
+i_Reserve_27_4	:	Bool	;	//	i_Reserve_27_4
+i_Reserve_27_5	:	Bool	;	//	i_Reserve_27_5
+i_Reserve_27_6	:	Bool	;	//	i_Reserve_27_6
+i_Reserve_27_7	:	Bool	;	//	i_Reserve_27_7
+i_Reserve_28_0	:	Bool	;	//	i_Reserve_28_0
+i_Reserve_28_1	:	Bool	;	//	i_Reserve_28_1
+i_Reserve_28_2	:	Bool	;	//	i_Reserve_28_2
+i_Reserve_28_3	:	Bool	;	//	i_Reserve_28_3
+i_Reserve_28_4	:	Bool	;	//	i_Reserve_28_4
+i_Reserve_28_5	:	Bool	;	//	i_Reserve_28_5
+i_Reserve_28_6	:	Bool	;	//	i_Reserve_28_6
+i_Reserve_28_7	:	Bool	;	//	i_Reserve_28_7
+i_Reserve_29_0	:	Bool	;	//	i_Reserve_29_0
+i_Reserve_29_1	:	Bool	;	//	i_Reserve_29_1
+i_Reserve_29_2	:	Bool	;	//	i_Reserve_29_2
+i_Reserve_29_3	:	Bool	;	//	i_Reserve_29_3
+i_Reserve_29_4	:	Bool	;	//	i_Reserve_29_4
+i_Reserve_29_5	:	Bool	;	//	i_Reserve_29_5
+i_Reserve_29_6	:	Bool	;	//	i_Reserve_29_6
+i_Reserve_29_7	:	Bool	;	//	i_Reserve_29_7
+i_Reserve_30_0	:	Bool	;	//	i_Reserve_30_0
+i_Reserve_30_1	:	Bool	;	//	i_Reserve_30_1
+i_Reserve_30_2	:	Bool	;	//	i_Reserve_30_2
+i_Reserve_30_3	:	Bool	;	//	i_Reserve_30_3
+i_Reserve_30_4	:	Bool	;	//	i_Reserve_30_4
+i_Reserve_30_5	:	Bool	;	//	i_Reserve_30_5
+i_Reserve_30_6	:	Bool	;	//	i_Reserve_30_6
+i_Reserve_30_7	:	Bool	;	//	i_Reserve_30_7
+i_Reserve_31_0	:	Bool	;	//	i_Reserve_31_0
+i_Reserve_31_1	:	Bool	;	//	i_Reserve_31_1
+i_Reserve_31_2	:	Bool	;	//	i_Reserve_31_2
+i_Reserve_31_3	:	Bool	;	//	i_Reserve_31_3
+i_Reserve_31_4	:	Bool	;	//	i_Reserve_31_4
+i_Reserve_31_5	:	Bool	;	//	i_Reserve_31_5
+i_Reserve_31_6	:	Bool	;	//	i_Reserve_31_6
+i_Reserve_31_7	:	Bool	;	//	i_Reserve_31_7
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="WeldRobotIn" Id="{61e15a7b-48e9-4832-953f-deb4a6ea4c79}">
+    <Declaration><![CDATA[TYPE WeldRobotIn :
+STRUCT
+	iMainJobActive: BOOL;
+	iAtParkPos: BOOL;
+	iWeldOn:BOOL;
+	iProgramNumber: INT;
+	Pos_20      : BOOL;
+    Pos_0       : BOOL;   // 0 degree feedback
+    Pos_M45     : BOOL;
+    Pos_M80     : BOOL;
+	LS_0        : BOOL;
+    LS_180      : BOOL;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

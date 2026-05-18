@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <GVL Name="Safety" Id="{40e14a2c-86a9-4dcc-af8f-a1d271cf65a4}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+		ixf_CA1_PowerON_vs	AT	%I*	:	BOOL	;	//	
+	ixf_RD2_PowerON_vs	AT	%I*	:	Bool	;	//	
+	ixf_FXC1_Safe_24VDC_vs	AT	%I*	:	Bool	;	//	
+	ixf_FXC2_Safe_24VDC_vs	AT	%I*	:	Bool	;	//	
+	ixf_AW1_PowerSource_vs	AT	%I*	:	Bool	;	//	
+	ixf_AW2_PowerSource_vs	AT	%I*	:	Bool	;	//	
+	ixf_FXC1_Safe_AirON_vs	AT	%I*	:	Bool	;	//	
+	ixf_FXC2_Safe_AirON_vs	AT	%I*	:	Bool	;	//	
+	ixf_CA1_EStop_ch1	AT	%I*	:	Bool	;	//	
+	ixf_UB3_EStop_ch1	AT	%I*	:	Bool	;	//	
+	ixf_UB2_EStop_ch1	AT	%I*	:	Bool	;	//	
+	ixf_RD2_isClosed_ch1	AT	%I*	:	Bool	;	//	
+	ixf_CA1_EStop_ch2	AT	%I*	:	Bool	;	//	
+	ixf_UB3_EStop_ch2	AT	%I*	:	Bool	;	//	
+	ixf_UB2_EStop_ch2	AT	%I*	:	Bool	;	//	
+	ixf_RD2_isClosed_ch2	AT	%I*	:	Bool	;	//	
+	//ixf_CA1_EStop_ch1_vs	AT	%I*	:	Bool	;	//	
+	//ixf_UB3_EStop_ch1_vs	AT	%I*	:	Bool	;	//	
+	//ixf_UB2_EStop_ch1_vs	AT	%I*	:	Bool	;	//	
+	//ixf_RD2_isClosed_ch1_vs	AT	%I*	:	Bool	;	//	
+	//ixf_CA1_EStop_ch2_vs	AT	%I*	:	Bool	;	//	
+	//ixf_UB3_EStop_ch2_vs	AT	%I*	:	Bool	;	//	
+	//ixf_UB2_EStop_ch2_vs	AT	%I*	:	Bool	;	//	
+	//ixf_RD2_isClosed_ch2_vs	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_0	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_1	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_2	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_3	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_4	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_5	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_6	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_300700_7	AT	%I*	:	Bool	;	//	
+	//ixf_RD1_PowerON_vs	AT	%I*	:	Bool	;	//	
+	ixf_UB1_EStop_ch1	AT	%I*	:	Bool	;	//	
+	ixf_LB1_InputArea_ch1	AT	%I*	:	Bool	;	//	
+	ixf_SW_AutomaticMode	AT	%I*	:	Bool	;	//	
+	ixf_RD1_isClosed_ch1	AT	%I*	:	Bool	;	//	
+	ixf_UB1_EStop_ch2	AT	%I*	:	Bool	;	//	
+	ixf_SW_ManualMode	AT	%I*	:	Bool	;	//	
+	ixf_RD1_isClosed_ch2	AT	%I*	:	Bool	;	//	
+	//ixf_UB1_EStop_ch1_vs	AT	%I*	:	Bool	;	//	
+	//ixf_LB1_InputArea_vs	AT	%I*	:	Bool	;	//	
+	//ixf_SW_AutomaticMode_vs	AT	%I*	:	Bool	;	//	
+	//ixf_RD1_isClosed_ch1_vs	AT	%I*	:	Bool	;	//	
+	//ixf_UB1_EStop_ch2_vs	AT	%I*	:	Bool	;	//	
+	//ixf_SW_ManualMode_vs	AT	%I*	:	Bool	;	//	
+	//ixf_RD1_isClosed_ch2_vs	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_0	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_1	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_2	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_3	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_4	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_5	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_6	AT	%I*	:	Bool	;	//	
+	//ixf_Reserve_30150_7	AT	%I*	:	Bool	;	//	Seq_Reset_WM
+	qxf_CA1_PowerON	AT	%Q*	:	Bool	;	//	
+	qxf_RD2_PowerON	AT	%Q*	:	Bool	;	//	
+	qxf_FXC1_Safe_24VDC	AT	%Q*	:	Bool	;	//	
+	qxf_FXC2_Safe_24VDC	AT	%Q*	:	Bool	;	//	
+	qxf_AW1_PowerON	AT	%Q*	:	Bool	;	//	
+	qxf_AW2_PowerON	AT	%Q*	:	Bool	;	//	
+	qxf_FXC1_Safe_AirON	AT	%Q*	:	Bool	;	//	
+	qxf_FXC2_Safe_AirON	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30020_0	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30020_1	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30020_2	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30020_3	AT	%Q*	:	Bool	;	//	
+	qxf_RD1_PowerON	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30100_1	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30100_2	AT	%Q*	:	Bool	;	//	
+	qxf_Reserve_30100_3	AT	%Q*	:	BOOL	;	//	
+	sRun AT	%Q*	:BOOL;
+	Ack AT	%Q*	:BOOL;
+	
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

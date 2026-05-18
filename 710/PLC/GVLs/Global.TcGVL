@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <GVL Name="Global" Id="{292020d3-5b17-4a8b-90cf-b305f235cc5c}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	ModeMang:FB_ModeCall;
+	Clamp_1:FB_CylinderModule;
+	Clamp_2:FB_CylinderModule;
+	Clamp_3:FB_CylinderModule;
+	Clamp_4:FB_CylinderModule;
+	Clamp_5:FB_CylinderModule;
+	Clamp_6:FB_CylinderModule;
+	RD1:FB_Roller_Door;
+	RD2:FB_Roller_Door;
+	Htable:FB_TurnTable_0_180;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

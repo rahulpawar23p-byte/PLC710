@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="WeldRobotOut" Id="{69ca8967-322e-4311-b6b2-e3477f1d0942}">
+    <Declaration><![CDATA[TYPE WeldRobotOut :
+STRUCT
+	oProgramNumber: INT;
+	oWeldStart: BOOL;
+	Move_20     : BOOL;
+    Move_0      : BOOL;   // Move to 0 degree
+    Move_M45    : BOOL;
+    Move_M80    : BOOL;
+	Motor_CW_0    : BOOL;
+    Motor_CCW_180   : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
