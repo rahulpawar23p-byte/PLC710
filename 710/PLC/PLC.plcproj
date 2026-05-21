@@ -82,6 +82,9 @@
     <Compile Include="POUs\Fixt2_Seq_Call_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Fixt2_Seq_Call_1_1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\Library\FB_AutoSeq.TcPOU">
       <SubType>Code</SubType>
     </Compile>
